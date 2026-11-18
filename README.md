@@ -71,17 +71,17 @@
 
 ```mermaid
 flowchart LR
-    subgraph 入库前
+    subgraph S1["入库前"]
         A[准备合并美术资产] --> B{入库预检<br/>R1–R6}
         B -->|拦截规则命中| X[阻止合并<br/>附文件 · 证据 · 建议]
         B -->|仅提醒| R[审核者核对]
         B -->|通过| M[合并]
     end
-    subgraph 版本会前
+    subgraph S2["版本会前"]
         E[必做任务] --> F[评论证据 + 停滞时间]
         F --> K[风险卡<br/>只引用可核对原文]
     end
-    subgraph 开工前
+    subgraph S3["开工前"]
         G[制作新资产] --> H[中文检索已有模型]
     end
     M -.-> P[历史回放 · 回测]
