@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}里程碑{% endblock %}
+{% block body %}
+<header><h1>里程碑</h1><p>计划日采用上游当前记录的最终值。延期天数按关闭时刻减最终计划时刻计算。</p></header>
+<div class="stats"><div><span>已关闭美术 Issue</span><strong>{{ report.closed_art_issues }}</strong></div>
+<div><span>关闭耗时中位数</span><strong>{{ report.median if report.median is not none else '—' }}<small> 天</small></strong></div>
+<div><span>关闭耗时 P75</span><strong>{{ report.p75 if report.p75 is not none else '—' }}<small> 天</small></strong></div></div>
+<section class="panel"><div class="table-wrap"><table>
+<thead><tr><th>里程碑</th><th>最终计划日期</th><th>关闭日期</th><th>延期</th><th>关闭 Issue</th></tr></thead>
+<tbody>{% for row in report.milestones|reverse %}<tr>
+<td><a href="{{ upstream }}/milestone/{{ row.id }}">{{ row.title }}</a></td>
+<td>{{ row.due_on[:10] if row.due_on else '—' }}</td>
+<td>{{ row.closed_at[:10] if row.closed_at else '—' }}</td>
+<td>{{ '%+d'|format(row.delay_days) if row.delay_days is not none else '—' }}</td>
+<td>{{ row.closed_issues }}</td></tr>{% endfor %}</tbody>
+</table></div></section>
+{% endblock %}

@@ -1,0 +1,11 @@
+{
+  "milestone": "Release 28",
+  "cutoff": "2026-01-23T19:17:50+01:00",
+  "due": "2026-02-18T23:59:59+01:00",
+  "closed": "2026-02-20T19:17:50+01:00",
+  "excluded": {
+    "missing": 0,
+    "uncertain": 0
+  },
+  "cases": []
+}

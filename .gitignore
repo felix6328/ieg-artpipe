@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+data/
+
+# Original supplied snapshot stays local (contains public account metadata).
+research/art_issues.json

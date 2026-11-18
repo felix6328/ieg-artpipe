@@ -1,0 +1,253 @@
+﻿number,url,title,bucket,type,priority,closed_as,state,created,closed,days_to_fix,comments
+9310,https://gitea.wildfiregames.com/0ad/0ad/issues/9310,Icon improvement proposals,B 内容缺口/新资产需求,Enhancement,3: Should Have,,open,2026-10-09,,,0
+9156,https://gitea.wildfiregames.com/0ad/0ad/issues/9156,pngcheck: faulty png,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,,open,2026-08-21,,,4
+8878,https://gitea.wildfiregames.com/0ad/0ad/issues/8878,Fishing Boats Could Position Nicer Over Fish,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,,open,2026-04-14,,,1
+8779,https://gitea.wildfiregames.com/0ad/0ad/issues/8779,FCollada Assertion on Windows in debug mode with german assets.,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,,open,2026-03-03,,,12
+8747,https://gitea.wildfiregames.com/0ad/0ad/issues/8747,Cimbrian Clubman has an icon color not matching to its Champion class,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2026-02-20,,,6
+8445,https://gitea.wildfiregames.com/0ad/0ad/issues/8445,Corresponding icons for corresponding buildings,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,,open,2025-10-12,,,7
+8414,https://gitea.wildfiregames.com/0ad/0ad/issues/8414,Han Chinese need new Battering Ram model,B 内容缺口/新资产需求,Enhancement,2: Must Have,,open,2025-10-06,,,23
+8389,https://gitea.wildfiregames.com/0ad/0ad/issues/8389,Create new Skirmish Replacer objects for all of the default structures,B 内容缺口/新资产需求,Enhancement,3: Should Have,,open,2025-09-29,,,1
+8333,https://gitea.wildfiregames.com/0ad/0ad/issues/8333,Ramming Ships need attack animations,C 质量/表现/其他(需人判断),Enhancement,2: Must Have,,open,2025-09-07,,,2
+8019,https://gitea.wildfiregames.com/0ad/0ad/issues/8019,Kushite (Cavalry) Stable needs a new model,B 内容缺口/新资产需求,Enhancement,3: Should Have,,open,2025-05-31,,,0
+7970,https://gitea.wildfiregames.com/0ad/0ad/issues/7970,Art: Gaul javelinist missing cape animation during attack,A 机器可检(缺失/断引用/格式/重复/报错),Defect,5: If Time Permits,,closed,2025-05-22,2025-07-05,,0
+7649,https://gitea.wildfiregames.com/0ad/0ad/issues/7649,Kushite cavalry spear wrong actor,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,,closed,2025-02-20,2025-10-13,,0
+7592,https://gitea.wildfiregames.com/0ad/0ad/issues/7592,Gaia emblem should appear when spectating as Gaia,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,Fixed,closed,2025-02-04,2026-09-02,575,0
+7468,https://gitea.wildfiregames.com/0ad/0ad/issues/7468,Deleting a Foundation in some common circumstances shouldn't leave a Rubble object,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,,open,2025-01-06,,,1
+7402,https://gitea.wildfiregames.com/0ad/0ad/issues/7402,Unify terrain and unit shaders.,C 质量/表现/其他(需人判断),Task,3: Should Have,,open,2024-12-28,,,1
+6911,https://gitea.wildfiregames.com/0ad/0ad/issues/6911,Several missing garrison flags,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2024-04-18,2026-07-30,833,7
+6868,https://gitea.wildfiregames.com/0ad/0ad/issues/6868,Fish with seagulls are not suitable for some maps,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2023-09-06,,,2
+6856,https://gitea.wildfiregames.com/0ad/0ad/issues/6856,improve color of repair icon,B 内容缺口/新资产需求,Enhancement,4: Nice To Have,Fixed,closed,2023-08-15,2023-08-18,2,6
+6758,https://gitea.wildfiregames.com/0ad/0ad/issues/6758,We need to check the conformity of the generation of ground flora textures in accordance with the type of trees.,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,,open,2023-03-08,,,1
+6756,https://gitea.wildfiregames.com/0ad/0ad/issues/6756,palm_tropical visual bug,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Fixed,closed,2023-03-07,2023-03-21,13,2
+6738,https://gitea.wildfiregames.com/0ad/0ad/issues/6738,Textures having png and dds in tree - part 2,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2023-02-13,2023-02-13,0,2
+6689,https://gitea.wildfiregames.com/0ad/0ad/issues/6689,Corral garrison flag missing,A 机器可检(缺失/断引用/格式/重复/报错),Enhancement,5: If Time Permits,Fixed,closed,2023-01-15,2023-01-15,0,4
+6683,https://gitea.wildfiregames.com/0ad/0ad/issues/6683,Han art oddity upon death,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Fixed,closed,2023-01-11,2023-01-21,10,5
+6647,https://gitea.wildfiregames.com/0ad/0ad/issues/6647,Artwork is scrambled,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2022-11-07,,,6
+6591,https://gitea.wildfiregames.com/0ad/0ad/issues/6591,New icon for the Han campion crossbow,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2022-07-17,2022-07-18,1,1
+6577,https://gitea.wildfiregames.com/0ad/0ad/issues/6577,Balcony sprite doesn't scale in the main menu,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2022-06-19,2026-09-06,1540,5
+6568,https://gitea.wildfiregames.com/0ad/0ad/issues/6568,Formations bigger than 20 should hold up a flag,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Invalid,closed,2022-06-11,2022-06-11,,1
+6556,https://gitea.wildfiregames.com/0ad/0ad/issues/6556,Blemmye Desert Raider has a very bright rein when zoomed out,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Fixed,closed,2022-06-03,2022-08-11,68,8
+6549,https://gitea.wildfiregames.com/0ad/0ad/issues/6549,Unit icon Han siege tower,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,Fixed,closed,2022-05-30,2022-05-30,0,2
+6503,https://gitea.wildfiregames.com/0ad/0ad/issues/6503,Han Chinese siege towers issues,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2022-04-19,2022-05-29,40,18
+6370,https://gitea.wildfiregames.com/0ad/0ad/issues/6370,Improved Hero marker,B 内容缺口/新资产需求,Enhancement,5: If Time Permits,,open,2021-10-30,,,6
+6326,https://gitea.wildfiregames.com/0ad/0ad/issues/6326,Textures having png and dds in tree,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2021-09-12,2021-12-12,91,5
+6324,https://gitea.wildfiregames.com/0ad/0ad/issues/6324,Corrupt dds file metal_desert_small_a.dds,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2021-09-12,2021-09-13,0,1
+6275,https://gitea.wildfiregames.com/0ad/0ad/issues/6275,Make the game more inclusive,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,,closed,2021-08-13,2025-09-02,,7
+6231,https://gitea.wildfiregames.com/0ad/0ad/issues/6231,New map previews have wrong angle and size.,A 机器可检(缺失/断引用/格式/重复/报错),Defect,4: Nice To Have,,open,2021-06-19,,,1
+6177,https://gitea.wildfiregames.com/0ad/0ad/issues/6177,Assert on brit_hero_caratacos.png,A 机器可检(缺失/断引用/格式/重复/报错),Defect,5: If Time Permits,Fixed,closed,2021-05-14,2021-05-14,0,1
+6169,https://gitea.wildfiregames.com/0ad/0ad/issues/6169,Muskox doesn't have idle/walk animations.,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2021-05-05,,,1
+6146,https://gitea.wildfiregames.com/0ad/0ad/issues/6146,Make fish also noticable with lowest water settings,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2021-04-16,2021-08-29,135,3
+6091,https://gitea.wildfiregames.com/0ad/0ad/issues/6091,A mahout for the mauryan worker elephant,C 质量/表现/其他(需人判断),Task,4: Nice To Have,Fixed,closed,2021-03-06,2021-06-04,89,1
+6017,https://gitea.wildfiregames.com/0ad/0ad/issues/6017,MapType Random show incorrect biome preview,A 机器可检(缺失/断引用/格式/重复/报错),Defect,5: If Time Permits,,open,2021-02-12,,,6
+5999,https://gitea.wildfiregames.com/0ad/0ad/issues/5999,Missing mesh,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,,open,2021-02-06,,,9
+5879,https://gitea.wildfiregames.com/0ad/0ad/issues/5879,Create animations for patrols waiting at waypoints.,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,,open,2020-12-10,,,2
+5600,https://gitea.wildfiregames.com/0ad/0ad/issues/5600,Missing files from latest changeset 22935,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2019-09-20,2019-09-20,0,7
+5590,https://gitea.wildfiregames.com/0ad/0ad/issues/5590,Some ranged units not showing projectile on first attack animation.,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,,open,2019-09-13,,,1
+5361,https://gitea.wildfiregames.com/0ad/0ad/issues/5361,"Remove 26MB duplicate art, sound and map files",A 机器可检(缺失/断引用/格式/重复/报错),Defect,4: Nice To Have,,open,2018-12-08,,,1
+5174,https://gitea.wildfiregames.com/0ad/0ad/issues/5174,Some actors errors,A 机器可检(缺失/断引用/格式/重复/报错),Defect,5: If Time Permits,Fixed,closed,2018-05-22,2018-09-11,111,2
+5105,https://gitea.wildfiregames.com/0ad/0ad/issues/5105,Errors when deleting the macedonian siege workshop,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2018-03-30,2018-04-01,1,2
+5087,https://gitea.wildfiregames.com/0ad/0ad/issues/5087,wrong placeholder for vercingetorix_infantry hero,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2018-03-21,2018-03-22,1,1
+5064,https://gitea.wildfiregames.com/0ad/0ad/issues/5064,Bear is missing animations,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Duplicate,closed,2018-03-04,2018-03-04,,1
+5056,https://gitea.wildfiregames.com/0ad/0ad/issues/5056,Prop attached to non-existent prop-point in eyecandy actor's death variant,A 机器可检(缺失/断引用/格式/重复/报错),Defect,5: If Time Permits,Fixed,closed,2018-02-28,2018-03-01,1,2
+4932,https://gitea.wildfiregames.com/0ad/0ad/issues/4932,spearmen are fighting with the resources they hold instead of weapons,C 质量/表现/其他(需人判断),Defect,1: Release Blocker,Fixed,closed,2018-01-07,2018-02-23,47,8
+4882,https://gitea.wildfiregames.com/0ad/0ad/issues/4882,Graphic bug on fields,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2017-11-28,2017-11-28,0,4
+4782,https://gitea.wildfiregames.com/0ad/0ad/issues/4782,No window icon for the mod selector,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2017-09-18,2019-09-10,722,1
+4716,https://gitea.wildfiregames.com/0ad/0ad/issues/4716,Add garrison flag to the ship.,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Duplicate,closed,2017-08-10,2020-06-25,,1
+4711,https://gitea.wildfiregames.com/0ad/0ad/issues/4711,Scythian Archer has no capture animation,B 内容缺口/新资产需求,Defect,3: Should Have,Fixed,closed,2017-08-07,2017-08-09,1,4
+4686,https://gitea.wildfiregames.com/0ad/0ad/issues/4686,Headless Hoplite,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2017-07-22,2017-08-07,15,3
+4685,https://gitea.wildfiregames.com/0ad/0ad/issues/4685,HD renderings of the 0 Wildfire Games and A.D. and logo,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2017-07-22,,,2
+4662,https://gitea.wildfiregames.com/0ad/0ad/issues/4662,The rider of the Boudica's chariot misses it's rein,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2017-07-02,,,12
+4644,https://gitea.wildfiregames.com/0ad/0ad/issues/4644,Rubble art for some buildings,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2017-06-16,,,1
+4634,https://gitea.wildfiregames.com/0ad/0ad/issues/4634,Wonder foundation size smaller than footprint,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2017-06-12,2018-01-12,213,3
+4581,https://gitea.wildfiregames.com/0ad/0ad/issues/4581,Flags for all garrisonable buildings and units,C 质量/表现/其他(需人判断),Defect,3: Should Have,,open,2017-05-20,,,17
+4542,https://gitea.wildfiregames.com/0ad/0ad/issues/4542,Carthaginian CC has a wall without texture,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2017-04-28,2017-07-22,84,1
+4541,https://gitea.wildfiregames.com/0ad/0ad/issues/4541,"Broken cache, Texture codec for header is not found",A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Duplicate,closed,2017-04-27,2017-04-27,,4
+4511,https://gitea.wildfiregames.com/0ad/0ad/issues/4511,Cavalry promotion animations missing,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2017-03-17,2018-01-11,299,4
+4487,https://gitea.wildfiregames.com/0ad/0ad/issues/4487,Roman Siege Wall icons,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2017-02-07,2026-04-21,3359,4
+4467,https://gitea.wildfiregames.com/0ad/0ad/issues/4467,Healing Icon,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,,open,2017-01-20,,,5
+4460,https://gitea.wildfiregames.com/0ad/0ad/issues/4460,FCollada crash in debug mode,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2017-01-14,2019-10-05,993,31
+4458,https://gitea.wildfiregames.com/0ad/0ad/issues/4458,[PATCH] xmlvalidator perl scripts tool,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2017-01-13,2017-05-30,136,8
+4440,https://gitea.wildfiregames.com/0ad/0ad/issues/4440,Issues in r19095,C 质量/表现/其他(需人判断),Defect,2: Must Have,Fixed,closed,2017-01-01,2017-01-10,9,25
+4394,https://gitea.wildfiregames.com/0ad/0ad/issues/4394,[PATCH] fndn_farmstead: required texture sampler aoTex,C 质量/表现/其他(需人判断),Defect,2: Must Have,Fixed,closed,2016-12-09,2016-12-26,17,10
+4054,https://gitea.wildfiregames.com/0ad/0ad/issues/4054,Green face in main menu,C 质量/表现/其他(需人判断),Defect,3: Should Have,Won't fix,closed,2016-06-12,2026-07-27,,3
+4019,https://gitea.wildfiregames.com/0ad/0ad/issues/4019,[PATCH] assign  back to work icon to the GUI.,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,Fixed,closed,2016-05-30,2020-05-07,1438,8
+3959,https://gitea.wildfiregames.com/0ad/0ad/issues/3959,[PATCH] Missing icons for new buildings in alpha 21,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2016-05-06,2016-10-31,177,17
+3935,https://gitea.wildfiregames.com/0ad/0ad/issues/3935,Slaughtered animation for bears,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Duplicate,closed,2016-04-29,2019-03-16,,3
+3916,https://gitea.wildfiregames.com/0ad/0ad/issues/3916,Farm variation by civ. Adding the committed farm to the civs.,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2016-04-19,2019-03-16,1060,4
+3913,https://gitea.wildfiregames.com/0ad/0ad/issues/3913,Flying wonder,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2016-04-17,2022-10-05,2361,5
+3879,https://gitea.wildfiregames.com/0ad/0ad/issues/3879,Walking animation for some animals.,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2016-04-03,2021-01-05,1737,3
+3813,https://gitea.wildfiregames.com/0ad/0ad/issues/3813,[PATCH] Cartaginian super dock has no garrison flag,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2016-03-08,2017-01-11,308,13
+3758,https://gitea.wildfiregames.com/0ad/0ad/issues/3758,Jav cav has no lvl up animation,B 内容缺口/新资产需求,Defect,4: Nice To Have,Fixed,closed,2016-01-24,2018-01-11,717,3
+3757,https://gitea.wildfiregames.com/0ad/0ad/issues/3757,Jav cav has no lvl up animation,B 内容缺口/新资产需求,Defect,4: Nice To Have,Duplicate,closed,2016-01-24,2016-02-07,,1
+3756,https://gitea.wildfiregames.com/0ad/0ad/issues/3756,Persian merchant ship animation,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,,open,2016-01-24,,,1
+3636,https://gitea.wildfiregames.com/0ad/0ad/issues/3636,Urban Sprites,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Invalid,closed,2015-11-22,2015-11-23,,3
+3631,https://gitea.wildfiregames.com/0ad/0ad/issues/3631,[PATCH] Seleucid Garrison Flag,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Fixed,closed,2015-11-21,2016-03-07,106,7
+3608,https://gitea.wildfiregames.com/0ad/0ad/issues/3608,WolfHound Actor is broken,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2015-11-14,2015-11-14,0,3
+3595,https://gitea.wildfiregames.com/0ad/0ad/issues/3595,[PATCH] Improve Capturing Icon.,B 内容缺口/新资产需求,Enhancement,3: Should Have,Fixed,closed,2015-11-11,2015-11-12,0,5
+3594,https://gitea.wildfiregames.com/0ad/0ad/issues/3594,Add animations to capturing,C 质量/表现/其他(需人判断),Enhancement,2: Must Have,Fixed,closed,2015-11-11,2017-01-18,433,3
+3543,https://gitea.wildfiregames.com/0ad/0ad/issues/3543,[PATCH] Ptolemian gate has no open animation,B 内容缺口/新资产需求,Defect,3: Should Have,Fixed,closed,2015-10-21,2016-08-08,292,3
+3542,https://gitea.wildfiregames.com/0ad/0ad/issues/3542,[PATCH] Flying celtic swordsmen,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2015-10-21,2015-10-31,9,4
+3520,https://gitea.wildfiregames.com/0ad/0ad/issues/3520,[PATCH] Iberian corral actor typo,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2015-10-11,2015-10-12,0,2
+3509,https://gitea.wildfiregames.com/0ad/0ad/issues/3509,[PATCH] Grapes are indistinguishable from the ground texture on some maps,C 质量/表现/其他(需人判断),Task,4: Nice To Have,Fixed,closed,2015-10-10,2015-12-12,63,7
+3377,https://gitea.wildfiregames.com/0ad/0ad/issues/3377,[PATCH] Berries are indistinguishable from the ground texture on some maps,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2015-08-21,2015-10-10,49,19
+3352,https://gitea.wildfiregames.com/0ad/0ad/issues/3352,Wooden towers don't have improved materials.,B 内容缺口/新资产需求,Defect,4: Nice To Have,Fixed,closed,2015-07-29,2015-08-24,25,8
+3312,https://gitea.wildfiregames.com/0ad/0ad/issues/3312,[PATCH] Main-menu rear-most background layer shifts suddenly sideways,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2015-06-24,2015-08-02,38,8
+3224,https://gitea.wildfiregames.com/0ad/0ad/issues/3224,[PATCH][Art] Aura Icons,C 质量/表现/其他(需人判断),Enhancement,2: Must Have,Fixed,closed,2015-05-05,2016-05-16,377,3
+3218,https://gitea.wildfiregames.com/0ad/0ad/issues/3218,[PATCH] destruct_rome_camp_turf missing AO texture / wrong material,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2015-05-03,2015-09-24,143,6
+3131,https://gitea.wildfiregames.com/0ad/0ad/issues/3131,Add infantry crossbows,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Invalid,closed,2015-03-22,2015-03-22,,2
+3126,https://gitea.wildfiregames.com/0ad/0ad/issues/3126,Cosmetic enhancement to animation of idle elephant feeding,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Invalid,closed,2015-03-22,2015-03-30,,1
+3014,https://gitea.wildfiregames.com/0ad/0ad/issues/3014,units aren't showing shooting missile  animation,C 质量/表现/其他(需人判断),Defect,2: Must Have,Works for me,closed,2015-01-22,2015-10-10,,1
+2986,https://gitea.wildfiregames.com/0ad/0ad/issues/2986,Ship mast destruction animation,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Duplicate,closed,2015-01-04,2019-09-10,,4
+2979,https://gitea.wildfiregames.com/0ad/0ad/issues/2979,Corinthian Isthmus (4) map hasn't got any entities,C 质量/表现/其他(需人判断),Task,2: Must Have,Duplicate,closed,2015-01-02,2015-02-03,,2
+2962,https://gitea.wildfiregames.com/0ad/0ad/issues/2962,[PATCH] Saharan Oases map,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2014-12-24,2014-12-24,0,2
+2923,https://gitea.wildfiregames.com/0ad/0ad/issues/2923,Letters disappear from screen.,C 质量/表现/其他(需人判断),Defect,2: Must Have,Needs info,closed,2014-11-08,2015-01-16,,1
+2892,https://gitea.wildfiregames.com/0ad/0ad/issues/2892,Dead Bear Animation,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,Duplicate,closed,2014-10-25,2018-01-12,,3
+2876,https://gitea.wildfiregames.com/0ad/0ad/issues/2876,[PATCH] Celt tower has a misleading unit in it,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Fixed,closed,2014-10-15,2015-02-04,112,18
+2766,https://gitea.wildfiregames.com/0ad/0ad/issues/2766,[PATCH] Kennel Mud Crash Atlas,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2014-09-03,2014-09-05,2,3
+2765,https://gitea.wildfiregames.com/0ad/0ad/issues/2765,[PATCH] Iberian fortress have no garrison flag when garrisoned,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2014-09-02,2014-09-05,2,3
+2664,https://gitea.wildfiregames.com/0ad/0ad/issues/2664,Either use abbreviations consistently or don't use them at all.,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Invalid,closed,2014-07-03,2015-06-11,,2
+2630,https://gitea.wildfiregames.com/0ad/0ad/issues/2630,"Carpet textures ""flicker"" and get hidden by ground texture",C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2014-06-16,2017-01-18,946,12
+2565,https://gitea.wildfiregames.com/0ad/0ad/issues/2565,Egyptian ships throw stones instead of arrows,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2014-05-18,2014-05-26,7,2
+2560,https://gitea.wildfiregames.com/0ad/0ad/issues/2560,Unreachable animals,C 质量/表现/其他(需人判断),Task,3: Should Have,Fixed,closed,2014-05-15,2015-01-24,253,11
+2542,https://gitea.wildfiregames.com/0ad/0ad/issues/2542,fishes on land in Ptolemies Demo map 1,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2014-05-08,2014-05-11,2,3
+2524,https://gitea.wildfiregames.com/0ad/0ad/issues/2524,Clean obsolete / broken art files,A 机器可检(缺失/断引用/格式/重复/报错),Task,4: Nice To Have,Fixed,closed,2014-05-04,2019-12-16,2052,55
+2470,https://gitea.wildfiregames.com/0ad/0ad/issues/2470,Hawk freezes in screen,C 质量/表现/其他(需人判断),Defect,3: Should Have,Duplicate,closed,2014-04-05,2014-04-05,,1
+2454,https://gitea.wildfiregames.com/0ad/0ad/issues/2454,"Hawk skeleton has duplicate ""Head"" bone/joint",A 机器可检(缺失/断引用/格式/重复/报错),Defect,1: Release Blocker,Fixed,closed,2014-03-09,2014-04-06,28,4
+2437,https://gitea.wildfiregames.com/0ad/0ad/issues/2437,Consider animated buildings,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Fixed,closed,2014-02-18,2015-01-18,333,3
+2374,https://gitea.wildfiregames.com/0ad/0ad/issues/2374,Missing Textures errors appear ingame upon destroying gaul civic centre.,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2014-01-13,2014-01-16,3,4
+2332,https://gitea.wildfiregames.com/0ad/0ad/issues/2332,Problem with the boar skeleton,C 质量/表现/其他(需人判断),Defect,1: Release Blocker,Fixed,closed,2013-12-30,2014-01-29,29,6
+2318,https://gitea.wildfiregames.com/0ad/0ad/issues/2318,Carthagian towers are constructed with the garrison flag up,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2013-12-21,2013-12-29,8,2
+2297,https://gitea.wildfiregames.com/0ad/0ad/issues/2297,(Seleucid Emblem),C 质量/表现/其他(需人判断),Task,4: Nice To Have,Fixed,closed,2013-12-03,2014-02-01,60,10
+2296,https://gitea.wildfiregames.com/0ad/0ad/issues/2296,Improve escort/guard icons,B 内容缺口/新资产需求,Enhancement,5: If Time Permits,Fixed,closed,2013-11-30,2020-05-07,2349,8
+2295,https://gitea.wildfiregames.com/0ad/0ad/issues/2295,"""Heavy Infantry"" Seleucid helmet",C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2014-03-02,92,1
+2294,https://gitea.wildfiregames.com/0ad/0ad/issues/2294,"""Thracian Mercenary"" helmet",C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2014-03-02,92,1
+2293,https://gitea.wildfiregames.com/0ad/0ad/issues/2293,"""Agema"" helmet.",C 质量/表现/其他(需人判断),Task,3: Should Have,Fixed,closed,2013-11-29,2018-01-05,1497,4
+2292,https://gitea.wildfiregames.com/0ad/0ad/issues/2292,"""Thracian Cap"" helmet",C 质量/表现/其他(需人判断),Task,3: Should Have,Fixed,closed,2013-11-29,2018-01-12,1504,3
+2291,https://gitea.wildfiregames.com/0ad/0ad/issues/2291,"""Pyrrhus"" helmet",C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2014-03-02,92,1
+2290,https://gitea.wildfiregames.com/0ad/0ad/issues/2290,"""Perseus"" hero helmet.",C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2014-03-02,92,1
+2289,https://gitea.wildfiregames.com/0ad/0ad/issues/2289,"""Cataphract"" helmet",C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2016-11-20,1086,4
+2288,https://gitea.wildfiregames.com/0ad/0ad/issues/2288,"""Officer Helmet""",C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2018-01-05,1497,6
+2287,https://gitea.wildfiregames.com/0ad/0ad/issues/2287,Thracian Horned helmet,C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2014-03-02,92,1
+2286,https://gitea.wildfiregames.com/0ad/0ad/issues/2286,"""Ptolemaic"" helmet",C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-11-29,2014-03-02,92,1
+2282,https://gitea.wildfiregames.com/0ad/0ad/issues/2282,Camel Raider converts suddenly into a chariot.,C 质量/表现/其他(需人判断),Defect,1: Release Blocker,Fixed,closed,2013-11-28,2013-11-28,0,2
+2259,https://gitea.wildfiregames.com/0ad/0ad/issues/2259,Elephant Animation error,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2013-11-12,2013-11-13,0,5
+2237,https://gitea.wildfiregames.com/0ad/0ad/issues/2237,Unit: Ship: Ptolemies: Fishing boat,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2013-12-28,69,2
+2236,https://gitea.wildfiregames.com/0ad/0ad/issues/2236,Unit: Ship: Ptolemies: Merchant,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-04-02,163,1
+2235,https://gitea.wildfiregames.com/0ad/0ad/issues/2235,Unit: Ptolemies: Female citizen: Head model,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2013-12-09,49,2
+2234,https://gitea.wildfiregames.com/0ad/0ad/issues/2234,Unit: Ptolemies: Priest/Healer,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-03-13,144,1
+2233,https://gitea.wildfiregames.com/0ad/0ad/issues/2233,Unit: Ship: Ptolemies: Juggernaut,B 内容缺口/新资产需求,Task,3: Should Have,Won't fix,closed,2013-10-20,2025-08-31,,10
+2232,https://gitea.wildfiregames.com/0ad/0ad/issues/2232,Unit: Ship: Ptolemies: Quinquereme,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-03-10,141,1
+2231,https://gitea.wildfiregames.com/0ad/0ad/issues/2231,Unit: Ship: Ptolemies: Trireme,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-04-06,168,1
+2230,https://gitea.wildfiregames.com/0ad/0ad/issues/2230,Unit: Ship: Ptolemies: Bireme,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-04-06,168,1
+2229,https://gitea.wildfiregames.com/0ad/0ad/issues/2229,Unit: Ptolemies: African war elephant,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-03-02,133,2
+2228,https://gitea.wildfiregames.com/0ad/0ad/issues/2228,Structure: Texture: Eyecandy: Athenians: Athena Parthenos Statue,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2026-07-07,4643,1
+2227,https://gitea.wildfiregames.com/0ad/0ad/issues/2227,Structure: Gauls: Rotary Mill,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-08-13,297,2
+2226,https://gitea.wildfiregames.com/0ad/0ad/issues/2226,Structure: Gauls: Farmstead,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-03-09,139,1
+2225,https://gitea.wildfiregames.com/0ad/0ad/issues/2225,Structure: Romans: Wonder: Temple of Capitoline Jupiter,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2017-01-18,1185,5
+2224,https://gitea.wildfiregames.com/0ad/0ad/issues/2224,Structure: Persians: Wonder: Gate of all Nations,B 内容缺口/新资产需求,Task,3: Should Have,,open,2013-10-20,,,1
+2223,https://gitea.wildfiregames.com/0ad/0ad/issues/2223,Structure: Texture: Mauryans: Wonder: Big Stupa,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2017-01-18,1185,2
+2222,https://gitea.wildfiregames.com/0ad/0ad/issues/2222,Structure: Iberians: Corral,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-03-09,139,9
+2221,https://gitea.wildfiregames.com/0ad/0ad/issues/2221,Structure: Iberians: Barracks,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-08-12,296,3
+2220,https://gitea.wildfiregames.com/0ad/0ad/issues/2220,Structure: Ptolemies: Wonder: Temple of Edfu,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2013-12-08,48,2
+2219,https://gitea.wildfiregames.com/0ad/0ad/issues/2219,Structure: Ptolemies: Wall segments and Wall gate,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2013-12-09,50,1
+2218,https://gitea.wildfiregames.com/0ad/0ad/issues/2218,Structure: Ptolemies: Market,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-02-23,126,0
+2217,https://gitea.wildfiregames.com/0ad/0ad/issues/2217,Structure: Ptolemies: Docks,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-03-12,143,2
+2216,https://gitea.wildfiregames.com/0ad/0ad/issues/2216,Structure: Ptolemies: Blacksmith,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-08-15,299,2
+2215,https://gitea.wildfiregames.com/0ad/0ad/issues/2215,Structure: Ptolemies: Corral,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2014-05-06,198,5
+2214,https://gitea.wildfiregames.com/0ad/0ad/issues/2214,Structure: Ptolemies: Military settlement,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-10-20,2016-07-06,990,6
+2099,https://gitea.wildfiregames.com/0ad/0ad/issues/2099,Animal: War Dogs,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-09-02,2015-11-14,803,1
+2069,https://gitea.wildfiregames.com/0ad/0ad/issues/2069,Incorrect and duplicate terrain textures,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2013-08-17,2013-08-22,4,4
+2068,https://gitea.wildfiregames.com/0ad/0ad/issues/2068,"Maurian ranged archer elephant. No actor on attachpoint ""projectile""",C 质量/表现/其他(需人判断),Defect,2: Must Have,Fixed,closed,2013-08-17,2013-08-18,1,2
+2061,https://gitea.wildfiregames.com/0ad/0ad/issues/2061,Mauryan Ox trader,C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2013-08-13,2017-12-19,1588,4
+2053,https://gitea.wildfiregames.com/0ad/0ad/issues/2053,Structure: Wonder: Britons: Stonehenge,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-08-08,2013-10-18,70,4
+2013,https://gitea.wildfiregames.com/0ad/0ad/issues/2013,Sahel watering holes contains animals in deep water.,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2013-06-29,2014-09-07,434,5
+2003,https://gitea.wildfiregames.com/0ad/0ad/issues/2003,Animal: Cobra,B 内容缺口/新资产需求,Task,3: Should Have,,open,2013-06-25,,,0
+1993,https://gitea.wildfiregames.com/0ad/0ad/issues/1993,Animal: Gorilla (Male),B 内容缺口/新资产需求,Task,3: Should Have,,open,2013-06-21,,,1
+1992,https://gitea.wildfiregames.com/0ad/0ad/issues/1992,Animal: Zebu (Indian cattle-Bos indicus),B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-06-21,2018-01-12,1666,3
+1991,https://gitea.wildfiregames.com/0ad/0ad/issues/1991,Animal: Partridge,B 内容缺口/新资产需求,Task,3: Should Have,Duplicate,closed,2013-06-21,2018-01-12,,3
+1983,https://gitea.wildfiregames.com/0ad/0ad/issues/1983,Animal: Chukar Partridge,B 内容缺口/新资产需求,Task,3: Should Have,,open,2013-06-18,,,2
+1981,https://gitea.wildfiregames.com/0ad/0ad/issues/1981,Animal: Eurasian Brown Bear,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-06-16,2020-03-21,2469,2
+1980,https://gitea.wildfiregames.com/0ad/0ad/issues/1980,Animal: Eurasian Wolf,B 内容缺口/新资产需求,Task,2: Must Have,Fixed,closed,2013-06-16,2014-04-25,312,2
+1979,https://gitea.wildfiregames.com/0ad/0ad/issues/1979,Animal: White Rhinoceros,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-06-16,2016-08-07,1147,3
+1978,https://gitea.wildfiregames.com/0ad/0ad/issues/1978,Animal: Indian Rhinoceros,B 内容缺口/新资产需求,Task,3: Should Have,,open,2013-06-16,,,0
+1977,https://gitea.wildfiregames.com/0ad/0ad/issues/1977,Animal: Gharial,B 内容缺口/新资产需求,Task,3: Should Have,,open,2013-06-16,,,12
+1976,https://gitea.wildfiregames.com/0ad/0ad/issues/1976,Animal: Nile Crocodile,B 内容缺口/新资产需求,Task,2: Must Have,Fixed,closed,2013-06-16,2013-12-29,195,3
+1975,https://gitea.wildfiregames.com/0ad/0ad/issues/1975,Animal: Hawk,B 内容缺口/新资产需求,Task,4: Nice To Have,Fixed,closed,2013-06-16,2013-12-30,197,2
+1974,https://gitea.wildfiregames.com/0ad/0ad/issues/1974,Animal: Bengal Tiger,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-06-15,2013-11-24,162,3
+1970,https://gitea.wildfiregames.com/0ad/0ad/issues/1970,Animal: Aurochs Bull & Aurochs Cow,B 内容缺口/新资产需求,Task,2: Must Have,Fixed,closed,2013-06-09,2019-09-10,2283,5
+1969,https://gitea.wildfiregames.com/0ad/0ad/issues/1969,Animal: Hippopotamus,B 内容缺口/新资产需求,Task,3: Should Have,Fixed,closed,2013-06-09,2020-04-25,2512,2
+1967,https://gitea.wildfiregames.com/0ad/0ad/issues/1967,Animal: Oryx beisa,B 内容缺口/新资产需求,Task,3: Should Have,,open,2013-06-09,,,1
+1935,https://gitea.wildfiregames.com/0ad/0ad/issues/1935,[PATCH] Gaul champion xml not found,A 机器可检(缺失/断引用/格式/重复/报错),Defect,1: Release Blocker,Fixed,closed,2013-05-21,2013-05-22,0,2
+1921,https://gitea.wildfiregames.com/0ad/0ad/issues/1921,[PATCH] Improve ship sinking.,B 内容缺口/新资产需求,Enhancement,4: Nice To Have,Fixed,closed,2013-04-26,2013-07-22,86,3
+1888,https://gitea.wildfiregames.com/0ad/0ad/issues/1888,Fix building destruction variations,C 质量/表现/其他(需人判断),Task,4: Nice To Have,Fixed,closed,2013-03-31,2017-01-18,1388,3
+1781,https://gitea.wildfiregames.com/0ad/0ad/issues/1781,SPQR on Roman Entrenched Army Camp,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Fixed,closed,2012-12-16,2013-02-12,57,1
+1708,https://gitea.wildfiregames.com/0ad/0ad/issues/1708,[PATCH] Roman Mars temple: Failed to find matching prop point,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2012-11-02,2012-11-03,1,4
+1706,https://gitea.wildfiregames.com/0ad/0ad/issues/1706,Update scenarios to make full use of the new water shader.,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2012-11-01,2012-12-02,31,2
+1674,https://gitea.wildfiregames.com/0ad/0ad/issues/1674,Gate open and close animation transition,C 质量/表现/其他(需人判断),Defect,3: Should Have,Duplicate,closed,2012-09-15,2012-09-15,,1
+1636,https://gitea.wildfiregames.com/0ad/0ad/issues/1636,Hint doesn't correspond resources,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Fixed,closed,2012-08-30,2012-08-30,0,3
+1564,https://gitea.wildfiregames.com/0ad/0ad/issues/1564,ERROR when destroying gate,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2012-07-30,2012-08-02,2,1
+1557,https://gitea.wildfiregames.com/0ad/0ad/issues/1557,FCollada assertion fails on elephant_african_forest.dae,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2012-07-27,2012-08-20,24,2
+1543,https://gitea.wildfiregames.com/0ad/0ad/issues/1543,Roman Quinquereme,C 质量/表现/其他(需人判断),Task,2: Must Have,Fixed,closed,2012-07-16,2012-07-22,6,2
+1542,https://gitea.wildfiregames.com/0ad/0ad/issues/1542,Roma Bireme,C 质量/表现/其他(需人判断),Task,3: Should Have,Fixed,closed,2012-07-16,2013-02-12,210,2
+1541,https://gitea.wildfiregames.com/0ad/0ad/issues/1541,Greek Fortress Update,C 质量/表现/其他(需人判断),Task,3: Should Have,Invalid,closed,2012-07-16,2012-08-14,,1
+1538,https://gitea.wildfiregames.com/0ad/0ad/issues/1538,Improve health / status bar appearance,B 内容缺口/新资产需求,Enhancement,4: Nice To Have,Works for me,closed,2012-07-15,2014-08-05,,2
+1536,https://gitea.wildfiregames.com/0ad/0ad/issues/1536,No animation.,B 内容缺口/新资产需求,Defect,2: Must Have,Invalid,closed,2012-07-15,2012-07-22,,1
+1523,https://gitea.wildfiregames.com/0ad/0ad/issues/1523,[PATCH] Persian archers regress to normal bows in attack animation,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2012-07-06,2012-07-07,0,2
+1517,https://gitea.wildfiregames.com/0ad/0ad/issues/1517,Improve selection ring,B 内容缺口/新资产需求,Enhancement,5: If Time Permits,Won't fix,closed,2012-07-01,2017-03-06,,5
+1501,https://gitea.wildfiregames.com/0ad/0ad/issues/1501,Improve ship damage / destruction animation,B 内容缺口/新资产需求,Enhancement,4: Nice To Have,,open,2012-06-16,,,4
+1498,https://gitea.wildfiregames.com/0ad/0ad/issues/1498,[PATCH] Fire particles for roman temple,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2012-06-13,2013-06-09,361,5
+1482,https://gitea.wildfiregames.com/0ad/0ad/issues/1482,Absent animation of destruction of ships,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Invalid,closed,2012-06-03,2012-06-03,,1
+1479,https://gitea.wildfiregames.com/0ad/0ad/issues/1479,Asian Elephant animation,C 质量/表现/其他(需人判断),Defect,2: Must Have,Invalid,closed,2012-06-03,2012-06-03,,1
+1466,https://gitea.wildfiregames.com/0ad/0ad/issues/1466,Units pass through each other and accelerate when turning,C 质量/表现/其他(需人判断),Defect,3: Should Have,Won't fix,closed,2012-06-01,2014-05-24,,2
+1464,https://gitea.wildfiregames.com/0ad/0ad/issues/1464,"Units are accelerated and trapped in the rocks, and buildings",C 质量/表现/其他(需人判断),Defect,3: Should Have,Invalid,closed,2012-06-01,2013-04-01,,2
+1443,https://gitea.wildfiregames.com/0ad/0ad/issues/1443,no animation of wild animals fight,B 内容缺口/新资产需求,Enhancement,3: Should Have,Invalid,closed,2012-05-26,2012-05-26,,1
+1440,https://gitea.wildfiregames.com/0ad/0ad/issues/1440,eagle is not moving,C 质量/表现/其他(需人判断),Defect,3: Should Have,Invalid,closed,2012-05-26,2012-05-26,,1
+1415,https://gitea.wildfiregames.com/0ad/0ad/issues/1415,wildbest animation,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Invalid,closed,2012-05-17,2012-05-18,,1
+1414,https://gitea.wildfiregames.com/0ad/0ad/issues/1414,animals battle animation,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Invalid,closed,2012-05-17,2012-05-18,,1
+1413,https://gitea.wildfiregames.com/0ad/0ad/issues/1413,Battle animation,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Invalid,closed,2012-05-17,2012-05-18,,3
+1412,https://gitea.wildfiregames.com/0ad/0ad/issues/1412,Sharks don't swim,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Invalid,closed,2012-05-17,2012-05-17,,3
+1335,https://gitea.wildfiregames.com/0ad/0ad/issues/1335,Add small distinct unit type icons to unit portraits,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Won't fix,closed,2012-04-20,2026-07-10,,11
+1331,https://gitea.wildfiregames.com/0ad/0ad/issues/1331,Atlas assets missing textures,A 机器可检(缺失/断引用/格式/重复/报错),Defect,4: Nice To Have,Invalid,closed,2012-04-20,2012-04-21,,1
+1330,https://gitea.wildfiregames.com/0ad/0ad/issues/1330,Atlas assets missing animation,A 机器可检(缺失/断引用/格式/重复/报错),Task,3: Should Have,Invalid,closed,2012-04-20,2012-04-21,,1
+1329,https://gitea.wildfiregames.com/0ad/0ad/issues/1329,Atlas assets errors,A 机器可检(缺失/断引用/格式/重复/报错),Defect,4: Nice To Have,Invalid,closed,2012-04-20,2012-04-21,,8
+1290,https://gitea.wildfiregames.com/0ad/0ad/issues/1290,Female citizens have no attack animation,B 内容缺口/新资产需求,Defect,3: Should Have,Fixed,closed,2012-04-06,2013-02-07,307,4
+1282,https://gitea.wildfiregames.com/0ad/0ad/issues/1282,Very fast camera's moving after developer overlay,C 质量/表现/其他(需人判断),Defect,3: Should Have,Needs info,closed,2012-04-01,2012-04-18,,0
+1281,https://gitea.wildfiregames.com/0ad/0ad/issues/1281,Very big height of camera in developer overlay is available,C 质量/表现/其他(需人判断),Defect,3: Should Have,Needs info,closed,2012-04-01,2012-04-18,,1
+1280,https://gitea.wildfiregames.com/0ad/0ad/issues/1280,Hotkey ALT + D doesn't work correctly,C 质量/表现/其他(需人判断),Defect,3: Should Have,Invalid,closed,2012-04-01,2012-04-18,,1
+1272,https://gitea.wildfiregames.com/0ad/0ad/issues/1272,Low productivity,C 质量/表现/其他(需人判断),Defect,3: Should Have,Invalid,closed,2012-04-01,2012-04-18,,1
+1270,https://gitea.wildfiregames.com/0ad/0ad/issues/1270,Fortress and Entrenched Army Camp have the same icons,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Invalid,closed,2012-04-01,2012-05-06,,1
+1267,https://gitea.wildfiregames.com/0ad/0ad/issues/1267,Imposing of objects,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Won't fix,closed,2012-04-01,2013-12-30,,4
+1233,https://gitea.wildfiregames.com/0ad/0ad/issues/1233,Some animals remain to stand after dying,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Invalid,closed,2012-03-21,2012-12-29,,3
+1228,https://gitea.wildfiregames.com/0ad/0ad/issues/1228,Add bird animations / AI,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2012-03-21,2013-12-30,648,8
+1217,https://gitea.wildfiregames.com/0ad/0ad/issues/1217,'hele_wall_tower' templates visual entrance differs from drop point,C 质量/表现/其他(需人判断),Defect,3: Should Have,Fixed,closed,2012-03-15,2013-11-12,606,5
+1190,https://gitea.wildfiregames.com/0ad/0ad/issues/1190,[PATCH] Selected stances and formations need to be more obvious.,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,Fixed,closed,2012-03-01,2012-03-21,19,13
+1133,https://gitea.wildfiregames.com/0ad/0ad/issues/1133,Add missing mines,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Invalid,closed,2012-01-23,2012-04-20,,2
+1070,https://gitea.wildfiregames.com/0ad/0ad/issues/1070,Running death animations,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,,open,2011-12-25,,,2
+1057,https://gitea.wildfiregames.com/0ad/0ad/issues/1057,Fauna animations,C 质量/表现/其他(需人判断),Enhancement,3: Should Have,Fixed,closed,2011-12-21,2012-03-01,70,20
+1023,https://gitea.wildfiregames.com/0ad/0ad/issues/1023,Wrong smoke position,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2011-11-18,2011-11-21,2,4
+1014,https://gitea.wildfiregames.com/0ad/0ad/issues/1014,Health Bar Bug on Cavalry,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Fixed,closed,2011-11-08,2012-07-23,257,3
+993,https://gitea.wildfiregames.com/0ad/0ad/issues/993,Cliffs,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,,open,2011-10-11,,,2
+954,https://gitea.wildfiregames.com/0ad/0ad/issues/954,Icon needs be in higher resolution,A 机器可检(缺失/断引用/格式/重复/报错),Enhancement,4: Nice To Have,Fixed,closed,2011-09-11,2014-08-05,1059,11
+950,https://gitea.wildfiregames.com/0ad/0ad/issues/950,Scenarios broken by territories,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2011-09-07,2011-09-08,0,1
+883,https://gitea.wildfiregames.com/0ad/0ad/issues/883,Scenarios - missing template errors,A 机器可检(缺失/断引用/格式/重复/报错),Defect,2: Must Have,Fixed,closed,2011-06-29,2011-07-02,3,0
+878,https://gitea.wildfiregames.com/0ad/0ad/issues/878,Garrisoned prop point error on Iberian civil centre,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2011-06-23,2011-07-03,9,1
+857,https://gitea.wildfiregames.com/0ad/0ad/issues/857,[PATCH]  Sahel Watering Holes - PlayerData / civilisation bug fix,C 质量/表现/其他(需人判断),Defect,2: Must Have,Fixed,closed,2011-05-15,2011-05-15,0,2
+856,https://gitea.wildfiregames.com/0ad/0ad/issues/856,[PATCH] Serengeti tree bug fix,C 质量/表现/其他(需人判断),Defect,2: Must Have,Fixed,closed,2011-05-15,2011-05-15,0,2
+854,https://gitea.wildfiregames.com/0ad/0ad/issues/854,Javelinist throw missiles backward,C 质量/表现/其他(需人判断),Defect,3: Should Have,Invalid,closed,2011-05-11,2012-04-20,,1
+819,https://gitea.wildfiregames.com/0ad/0ad/issues/819,Add dust particles for building destruction,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Fixed,closed,2011-05-02,2012-02-25,299,1
+770,https://gitea.wildfiregames.com/0ad/0ad/issues/770,Unify user interface styles,C 质量/表现/其他(需人判断),Enhancement,2: Must Have,Fixed,closed,2011-04-08,2011-09-17,161,3
+768,https://gitea.wildfiregames.com/0ad/0ad/issues/768,Various ERRORs,A 机器可检(缺失/断引用/格式/重复/报错),Defect,1: Release Blocker,Fixed,closed,2011-04-07,2011-04-26,19,4
+705,https://gitea.wildfiregames.com/0ad/0ad/issues/705,[PATCH] Tooltips go off screen in lower resolutions,A 机器可检(缺失/断引用/格式/重复/报错),Defect,4: Nice To Have,Fixed,closed,2010-12-10,2011-02-13,64,5
+699,https://gitea.wildfiregames.com/0ad/0ad/issues/699,Missing textures in Cycladic Archipelago,A 机器可检(缺失/断引用/格式/重复/报错),Defect,3: Should Have,Fixed,closed,2010-12-06,2010-12-06,0,0
+682,https://gitea.wildfiregames.com/0ad/0ad/issues/682,Jumping Fishing Spots,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2010-11-24,2011-12-18,388,2
+667,https://gitea.wildfiregames.com/0ad/0ad/issues/667,Fields constructed using a hammer,C 质量/表现/其他(需人判断),Defect,4: Nice To Have,Won't fix,closed,2010-11-11,2013-02-12,,1
+650,https://gitea.wildfiregames.com/0ad/0ad/issues/650,something wrong with the map oasis,A 机器可检(缺失/断引用/格式/重复/报错),Defect,4: Nice To Have,Fixed,closed,2010-10-27,2010-10-28,0,4
+649,https://gitea.wildfiregames.com/0ad/0ad/issues/649,something wrong with the map oasis,A 机器可检(缺失/断引用/格式/重复/报错),Defect,4: Nice To Have,Duplicate,closed,2010-10-27,2010-10-27,,0
+625,https://gitea.wildfiregames.com/0ad/0ad/issues/625,Minimap is not flush with left side of screen in widescreen or non-standard aspect ratios.,C 质量/表现/其他(需人判断),Defect,5: If Time Permits,Fixed,closed,2010-10-20,2012-07-23,641,7
+533,https://gitea.wildfiregames.com/0ad/0ad/issues/533,Fishing ships for Hellenes,C 质量/表现/其他(需人判断),Enhancement,4: Nice To Have,Fixed,closed,2010-08-10,2010-11-24,106,3
+401,https://gitea.wildfiregames.com/0ad/0ad/issues/401,"GUI ""Structure"" Icons",C 质量/表现/其他(需人判断),Task,3: Should Have,Invalid,closed,2009-11-10,2010-10-03,,3
+289,https://gitea.wildfiregames.com/0ad/0ad/issues/289,Modeling and Texturing Game Fauna (Animals),C 质量/表现/其他(需人判断),Task,3: Should Have,Invalid,closed,2009-07-26,2010-10-03,,1
+286,https://gitea.wildfiregames.com/0ad/0ad/issues/286,Modeling and Mapping Greek (Hellenic) Buildings v2.0,C 质量/表现/其他(需人判断),Task,3: Should Have,Invalid,closed,2009-07-25,2010-10-03,,4
+274,https://gitea.wildfiregames.com/0ad/0ad/issues/274,Stone/mineral/tree models,C 质量/表现/其他(需人判断),Enhancement,5: If Time Permits,Invalid,closed,2009-07-19,2012-04-18,,3
+131,https://gitea.wildfiregames.com/0ad/0ad/issues/131,Building Damage / Destruction / Capture visual clue,C 质量/表现/其他(需人判断),Task,3: Should Have,,open,2006-07-10,,,16
+98,https://gitea.wildfiregames.com/0ad/0ad/issues/98,Cavalry Animations,C 质量/表现/其他(需人判断),Task,3: Should Have,Invalid,closed,2006-05-19,2012-05-21,,3

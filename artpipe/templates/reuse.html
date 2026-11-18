@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}资产复用{% endblock %}
+{% block body %}
+<header><h1>资产复用</h1><p>用中文描述要找的美术资产，查看模型缩略图、面数和引用关系。</p></header>
+<form class="panel filters">
+  {% if poly_available %}<label>项目库 <select name="library">
+    <option value="0ad" {% if library!='polyhaven' %}selected{% endif %}>0 A.D.</option>
+    <option value="polyhaven" {% if library=='polyhaven' %}selected{% endif %}>Poly Haven</option>
+  </select></label>{% endif %}
+  <label class="wide">描述 <input name="q" value="{{ q }}" placeholder="例如 找一台有木顶的攻城锤" required></label>
+  <label>类别 <select name="category">
+    {% for key, name in [('', '全部'), ('han','汉朝'), ('siege','攻城器械'), ('structure','建筑部件')] %}<option value="{{ key }}" {% if key==category %}selected{% endif %}>{{ name }}</option>{% endfor %}
+  </select></label>
+  <label>面数上限 <input name="max_faces" min="1" type="number" value="{{ max_faces }}" placeholder="三角面"></label>
+  <label>检索方式 <select name="mode">
+    {% for key, name in [('lexical','中文词法检索'), ('filename','文件名基线')] + ([('hybrid','混合检索')] if visual else []) %}<option value="{{ key }}" {% if key==mode %}selected{% endif %}>{{ name }}</option>{% endfor %}
+  </select></label>
+  <button>检索</button>
+</form>
+{% if notice %}<p class="error">{{ notice }}</p>{% endif %}
+{% if library == 'polyhaven' %}
+<section class="panel">
+  <div class="section-heading"><h2>Poly Haven · CC0 项目库</h2><a href="https://polyhaven.com/license">许可和来源</a></div>
+  <ul class="asset-list">{% for item in external %}<li><a href="{{ item.source }}">{{ item.name }}</a>
+    <small>{{ item.categories|join(' · ') }}</small></li>
+  {% else %}<li>该目录暂无匹配模型。</li>{% endfor %}</ul>
+</section>
+{% elif not manifest %}
+<p class="empty">先运行 <code>python scripts/build_library.py</code> 构建模型目录和缩略图。</p>
+{% elif not q %}
+<div class="examples"><span>常用场景</span>
+  <a href="/reuse?q=攻城锤&amp;category=siege">寻找攻城锤参考</a>
+  <a href="/reuse?q=汉朝兵营&amp;category=han">查看汉朝兵营</a>
+  <a href="/reuse?q=木墙&amp;max_faces=1000">找低面数木墙</a></div>
+{% elif hits %}
+<section class="asset-grid" aria-label="检索结果">
+  {% for asset in hits %}
+  <article class="panel preview">
+    <a href="/asset/{{ asset.path|urlencode }}"><img loading="lazy" src="/thumbnail/{{ asset.thumbnail }}" alt="{{ asset.path.rsplit('/',1)[-1] }} 模型缩略图"></a>
+    <div><a class="mono" href="/asset/{{ asset.path|urlencode }}">{{ asset.path.rsplit('/',1)[-1] }}</a>
+    <p>{{ '{:,}'.format(asset.triangles) }} 三角面 · {{ asset.license }}</p></div>
+  </article>
+  {% endfor %}
+</section>
+{% else %}<p class="empty">没有符合描述和筛选条件的资产。</p>{% endif %}
+{% endblock %}

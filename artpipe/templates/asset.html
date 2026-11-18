@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}资产详情{% endblock %}
+{% block body %}
+<header><p><a href="/assets">返回资产目录</a></p><h1>资产详情</h1><p class="mono">{{ path }}</p></header>
+{% if asset %}
+<p class="table-note">Git 对象 <code>{{ asset[:12] }}</code> · <a href="{{ asset_url }}">上游文件</a></p>
+<div class="graph" aria-label="资产引用关系">
+  <section class="panel"><div class="section-heading"><h2>{{ incoming_count }} 个引用方</h2></div>
+    <ul class="asset-list">{% for item in incoming %}<li><a class="mono" href="/asset/{{ item|urlencode }}">{{ item }}</a></li>
+    {% else %}<li>未找到当前版本的 XML 引用。</li>{% endfor %}</ul></section>
+  <div class="graph-node"><span aria-hidden="true">→</span><strong>{{ path.rsplit('/', 1)[-1] }}</strong><span aria-hidden="true">→</span></div>
+  <section class="panel"><div class="section-heading"><h2>{{ outgoing|length }} 个引用目标</h2></div>
+    <ul class="asset-list">{% for item in outgoing %}<li>{% if item.target in known %}<a class="mono" href="/asset/{{ item.target|urlencode }}">{{ item.target }}</a>
+    {% else %}<span class="danger">{{ item.target }} · 缺失</span>{% endif %}<small>第 {{ item.line }} 行 · {{ item.kind }}</small></li>
+    {% else %}<li>该文件无解析到的 XML 引用。</li>{% endfor %}</ul></section>
+</div>
+{% else %}<p class="empty">当前版本的资产目录没有这个路径。历史版本可从预检报告中的提交链接查看。</p>{% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}美术资产工作台{% endblock %} · ArtPipe</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='workbench.css').path }}">
+</head>
+<body>
+  <aside>
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true">A</span>
+      <span>ArtPipe<small>美术资产工作台</small></span>
+    </a>
+    <nav aria-label="工作台">
+      {% for key, route, label in [('intake','/','入库预检'), ('replay','/replay','历史回放'), ('radar','/radar','风险雷达'), ('milestones','/milestones','里程碑'), ('assets','/assets','资产目录'), ('reuse','/reuse','资产复用')] %}
+      <a href="{{ route }}" {% if active == key %}aria-current="page"{% endif %}>{{ label }}</a>
+      {% endfor %}
+    </nav>
+    <div class="source-label"><span></span> 数据源 · 0 A.D.</div>
+  </aside>
+  <div class="workspace">
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+    <footer>美术素材来自 0 A.D.，© <a href="https://www.wildfiregames.com/">Wildfire Games</a>，
+      <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>。</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+rule,revision,path,line,evidence,verdict
+R1,9f2b761478bd00e85e2b8de6c575794d39c1b2c4,textures/skins/structural/kart_trireme.png,,同时存在 textures/skins/structural/kart_trireme.png 和 textures/skins/structural/kart_trireme.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/cursor-rally.png,,同时存在 textures/cursors/cursor-rally.png 和 textures/cursors/cursor-rally.dds,valid
+R1,c44964a7f51533e3853863700f072b77a7a79219,textures/skins/structural/rome_struct.png,,同时存在 textures/skins/structural/rome_struct.png 和 textures/skins/structural/rome_struct.dds,valid
+R1,47275d9416acee0198f8fdccdd5ac0f29319c47a,textures/terrain/types/alpine_grass_a.png,,同时存在 textures/terrain/types/alpine_grass_a.png 和 textures/terrain/types/alpine_grass_a.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/test-old.png,,同时存在 textures/cursors/test-old.png 和 textures/cursors/test-old.dds,valid
+R1,6ceee8a5ec8d3dc5d495d16f59af35f829a5f157,textures/skins/structural/hele_struct.png,,同时存在 textures/skins/structural/hele_struct.png 和 textures/skins/structural/hele_struct.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/action-gather-fish.png,,同时存在 textures/cursors/action-gather-fish.png 和 textures/cursors/action-gather-fish.dds,valid
+R1,e329a9397819db80c57d12f8e2f008091fd8f066,textures/skins/gaia/farming_barley_harvest_a.png,,同时存在 textures/skins/gaia/farming_barley_harvest_a.png 和 textures/skins/gaia/farming_barley_harvest_a.dds,valid
+R1,377deaa7466a43cdfcb4784aae55c631c85732da,textures/skins/props/head/celt_caratacos.png,,同时存在 textures/skins/props/head/celt_caratacos.png 和 textures/skins/props/head/celt_caratacos.dds,valid
+R1,47275d9416acee0198f8fdccdd5ac0f29319c47a,textures/terrain/types/alpine_grass_c.png,,同时存在 textures/terrain/types/alpine_grass_c.png 和 textures/terrain/types/alpine_grass_c.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/arrow-default-down.png,,同时存在 textures/cursors/arrow-default-down.png 和 textures/cursors/arrow-default-down.dds,valid
+R1,10c0d813bfe1399a83c6d42ae6ae155005966847,textures/skins/props/head/pers_face_j.png,,同时存在 textures/skins/props/head/pers_face_j.png 和 textures/skins/props/head/pers_face_j.dds,valid
+R1,83680b0dee7fbfcffdbbf19ea88cc13ecc2919f2,textures/skins/gaia/tree_cypress_a.png,,同时存在 textures/skins/gaia/tree_cypress_a.png 和 textures/skins/gaia/tree_cypress_a.dds,valid
+R1,e329a9397819db80c57d12f8e2f008091fd8f066,textures/skins/gaia/farming_wheat_harvest_a.png,,同时存在 textures/skins/gaia/farming_wheat_harvest_a.png 和 textures/skins/gaia/farming_wheat_harvest_a.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/action-blank.png,,同时存在 textures/cursors/action-blank.png 和 textures/cursors/action-blank.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/action-gather-fruit.png,,同时存在 textures/cursors/action-gather-fruit.png 和 textures/cursors/action-gather-fruit.dds,valid
+R1,97a3f41238864d948f98c1a532c8c1258ab06633,textures/skins/skeletal/animal_fox_red.png,,同时存在 textures/skins/skeletal/animal_fox_red.png 和 textures/skins/skeletal/animal_fox_red.dds,valid
+R1,a5679ddcd44febc531cee324c7829162eb02e683,textures/skins/skeletal/mace_bronzeshield_pikeman_a.png,,同时存在 textures/skins/skeletal/mace_bronzeshield_pikeman_a.png 和 textures/skins/skeletal/mace_bronzeshield_pikeman_a.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/test.png,,同时存在 textures/cursors/test.png 和 textures/cursors/test.dds,valid
+R1,01f699b62d8375ade8fb7bb09c5f97bb2572e5b8,textures/skins/structural/iber_ship.png,,同时存在 textures/skins/structural/iber_ship.png 和 textures/skins/structural/iber_ship.dds,valid
+R1,fa446685c804e92f3b8dd7a48e88c6401330a997,textures/skins/skeletal/hele_isp_a_2.png,,同时存在 textures/skins/skeletal/hele_isp_a_2.png 和 textures/skins/skeletal/hele_isp_a_2.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/action-gather-tree.png,,同时存在 textures/cursors/action-gather-tree.png 和 textures/cursors/action-gather-tree.dds,valid
+R1,10c0d813bfe1399a83c6d42ae6ae155005966847,textures/skins/props/head/pers_face_a.png,,同时存在 textures/skins/props/head/pers_face_a.png 和 textures/skins/props/head/pers_face_a.dds,valid
+R1,80b0106502f3a1c4b28d6a08aad7c3b2273e5463,textures/skins/props/shield/mace_silver_a.png,,同时存在 textures/skins/props/shield/mace_silver_a.png 和 textures/skins/props/shield/mace_silver_a.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/action-build.png,,同时存在 textures/cursors/action-build.png 和 textures/cursors/action-build.dds,valid
+R1,d5cacb027f77186e6849670f88a50f3d4fe7b1f2,textures/skins/skeletal/animal_wolf_white.png,,同时存在 textures/skins/skeletal/animal_wolf_white.png 和 textures/skins/skeletal/animal_wolf_white.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/action-gather-grain.png,,同时存在 textures/cursors/action-gather-grain.png 和 textures/cursors/action-gather-grain.dds,valid
+R1,05c42846ec4d2ddefba187e38064409ea2d8aa93,textures/skins/skeletal/pers_isp_e_1.png,,同时存在 textures/skins/skeletal/pers_isp_e_1.png 和 textures/skins/skeletal/pers_isp_e_1.dds,valid
+R1,10c0d813bfe1399a83c6d42ae6ae155005966847,textures/skins/props/head/pers_face_i.png,,同时存在 textures/skins/props/head/pers_face_i.png 和 textures/skins/props/head/pers_face_i.dds,valid
+R1,41e1652e10637e3fc6d5a267e7d62b4fef37577c,textures/cursors/action-garrison.png,,同时存在 textures/cursors/action-garrison.png 和 textures/cursors/action-garrison.dds,valid
+R2,bd730ae8c89b7fe2f199dec0e1dbcb4253cb87a5,actors/units/kushites/cavalry_spearman_e_m.xml,50,专家级单位引用了较低等级的部件 actors/units/kushites/cavalry_spearman_a_r.xml,valid
+R2,bd730ae8c89b7fe2f199dec0e1dbcb4253cb87a5,actors/units/persians/cavalry_javelinist_e_m.xml,47,专家级单位引用了较低等级的部件 actors/units/persians/cavalry_javelinist_a_r.xml,valid
+R2,5268cb62a6739ca7084522816c3ff1535b3c5d76,actors/units/achaemenids/cavalry_javelinist_e_m.xml,47,专家级单位引用了较低等级的部件 actors/units/achaemenids/cavalry_javelinist_a_r.xml,valid
+R3,14b258b1026030c3c44e49e092a2771f3bff5245,textures/particles/hero_aura.png,,sRGB × 1 / iCCP × 1,valid
+R3,14b258b1026030c3c44e49e092a2771f3bff5245,textures/skins/gaia/rice_paddy_norm.png,,sRGB × 0 / iCCP × 2,valid
+R4,7d180bcf14279fb1a5bc7b3326ef1a4e99ad0f43,textures/ui/session/portraits/units/kush_hero_arakamani.png,,宽高为 250 × 250,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/hellenes/xenophon.xml,38,variant 目标不存在：variants/biped/carry_wood_idle.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/carthaginians/infantry_swordsman_e.xml,44,variant 目标不存在：variants/biped/carry_meat_idle.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/romans/imp_rome_champion_1.xml,41,variant 目标不存在：variants/biped/carry_wood_idle.xml,valid
+R5,3a8a66100574da4d1fa727bb02e528bc5006621c,actors/props/horse/cav_rein_swordsman_shield.xml,13,variant 目标不存在：variants/others/base_cavalry_swordsman_shield.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/kushites/infantry_axeman_champion.xml,70,variant 目标不存在：variants/biped/carry_food_idle.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/macedonians/demetrius.xml,37,variant 目标不存在：variants/biped/carry_meat_idle.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/macedonians/thorakites.xml,47,variant 目标不存在：variants/biped/carry_metal_idle.xml,valid
+R5,8b7ba6e631f084e692ea3fe15fbd44bf158303b8,variants/quadraped/props/blanket_fur.xml,3,mesh 目标不存在：meshes/props/horse_blanket_short.dae,valid
+R5,d3ec3e7c7f9f378f2e820f4bd4a0e4fa61db9bfa,actors/props/units/heads/rome_etrusco_b.xml,12,mesh 目标不存在：meshes/props/helmet/rome_helmet_j.pmd,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/mauryans/infantry_archer_a.xml,41,variant 目标不存在：variants/biped/carry_meat_idle.xml,valid
+R5,5ae660300ead824e00ff6cb18eb058b2a5f74a2e,actors/props/units/shields/pelta_c_back_wicker.xml,7,variant 目标不存在：variants/shields/pelta_c_back_wicker_03.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/spartans/champion_pikeman.xml,52,variant 目标不存在：variants/biped/carry_metal_idle.xml,valid
+R5,3a8a66100574da4d1fa727bb02e528bc5006621c,actors/props/horse/cav_rein_swordsman.xml,18,variant 目标不存在：variants/others/horse_rein/promotion.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/ptolemies/spear_infantry_b.xml,47,variant 目标不存在：variants/biped/carry_metal_idle.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/carthaginians/infantry_swordsman_2_b.xml,50,variant 目标不存在：variants/biped/carry_wood_idle.xml,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/iberians/infantry_slinger_b.xml,43,variant 目标不存在：variants/biped/carry_meat_idle.xml,valid
+R5,d3ec3e7c7f9f378f2e820f4bd4a0e4fa61db9bfa,actors/props/units/heads/samnite_test.xml,15,mesh 目标不存在：meshes/props/helmet/samn_helmet_b.pmd,valid
+R5,8b7ba6e631f084e692ea3fe15fbd44bf158303b8,actors/fauna/pony.xml,32,texture 目标不存在：textures/skins/skeletal/horse_gray_a.dds,valid
+R5,42b64f8ea20948523e078333ccf33b0c9d503ad8,actors/props/units/helmets/old/sele_romanized_visor_iron.xml,16,texture 目标不存在：textures/skins/props/helmet/old/sele_romanized_visor_iron_2.png,valid
+R5,35dcdb263f3cef03474e1bacda3833760c74afd5,actors/props/units/helmets/props/illyrian_crest.xml,24,mesh 目标不存在：meshes/props/helmet/hele_illyrian_crest_04.dae,valid
+R5,772cbcb91576a7ed65ecf9644dfe37ad65b231ca,actors/units/spartans/infantry_spearman_e.xml,122,texture 目标不存在：textures/skins/skeletal/hele_scale_1_a.png,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/persians/cavalry_swordsman_a_r.xml,27,variant 目标不存在：variants/biped/attack_slaughter_shield_cavalry.xml,valid
+R5,772cbcb91576a7ed65ecf9644dfe37ad65b231ca,actors/units/spartans/cavalry_spearman_e_r.xml,79,texture 目标不存在：textures/skins/skeletal/hele_linothorax_lamelar_1_b.png,valid
+R5,9147b1d6915230ca2bcc502ed4f67f65287e269e,actors/units/spartans/champion_infantry_300.xml,18,prop 目标不存在：actors/props/units/cape_animated_hoplite.xml,valid
+R5,cdd2c74d4466796e5d4c870fd0b44fc52adb86dc,actors/props/structures/romans/storehouse.xml,17,texture 目标不存在：textures/skins/structural/rome_struct.dds,valid
+R5,f03a18f72e3d3c938f5d2071678e53fc146d9bb9,actors/props/horse/cav_blanket_sele_cataphract_iron.xml,20,variant 目标不存在：variants/quadraped/horse/props/blanket_sele_cataphract_01_iron.xml,valid
+R5,5ae660300ead824e00ff6cb18eb058b2a5f74a2e,actors/props/units/shields/pelta_front_01.xml,6,mesh 目标不存在：meshes/props/shields/pelta_front.dae,valid
+R5,3e6bb638a3521e810138237e25ca669688e31d49,actors/units/macedonians/infantry_pikeman_a.xml,13,texture 目标不存在：textures/skins/skeletal/hele_linothorax_1_spec.png,valid
+R5,9929d9c6849af11023938cbca30843de48466a77,actors/props/structures/gauls/storehouse_barrel_b.xml,10,texture 目标不存在：textures/skins/structural/ao/gaul_storehouse_ao.png,valid
+R5,ccb831cf849ee8dddfd9ddf27700b815f8d7a7dd,actors/units/carthaginians/oxybeles_infantry_b.xml,41,variant 目标不存在：variants/biped/carry_meat_idle.xml,valid
+R6,edc1b2c0660c440292490a6e6f1ed92f1491f49c,textures/skins/structural/ao/gaul_scout_tower_2_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,abe81a051098e1b7ff71c56a55ef4a4ce5152365,actors/units/ptolemies/hero_infantry_swordsman_ptolemy_IV.xml,,文件路径字符或扩展名不符合项目规范,valid
+R6,6543e78cce2fd08dad1c8f14dd1da007c40d7d81,textures/skins/structural/ao/sele_dock_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,e942768b4df3e0497685b1fc16fa5e7eab70442d,meshes/skeletal/Croc.dae,,文件路径字符或扩展名不符合项目规范,valid
+R6,4e2866baeb0a89c5e951f6ac454ed49064dcdd44,textures/skins/structural/ao/pers_workshop_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,eac96dbcbd31392ea9bf0c957dfcff6130ae4349,textures/skins/structural/ao/germans/blacksmith_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,d59472fd427cff9e9164245750c48bb233d0d9eb,textures/skins/structural/ao/ptol_house_new_3_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,88ab3f0f5b7779fcb5ae9fcb4bc6097a57ca7909,textures/terrain/types/LavaTest03.dds,,文件路径字符或扩展名不符合项目规范,valid
+R6,4f44416bb0eaa4ef74102bd038a0f75a49dd6be5,textures/skins/structural/ao/iber_house_1_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,88ab3f0f5b7779fcb5ae9fcb4bc6097a57ca7909,textures/terrain/types/snow rocks.dds,,文件路径字符或扩展名不符合项目规范,valid
+R6,b733bd113a06e56fbe6df52b86ad51d1da341965,actors/props/special/eyecandy/Brick_Pile2.xml,,文件路径字符或扩展名不符合项目规范,valid
+R6,9a4fcd55a82edd43545d8701901bc47f3368ee8d,skeletons/gate - Copy.xml,,文件路径字符或扩展名不符合项目规范,valid
+R6,88ab3f0f5b7779fcb5ae9fcb4bc6097a57ca7909,terrains/dirt/DirtTests2.xml,,文件路径字符或扩展名不符合项目规范,valid
+R6,88ab3f0f5b7779fcb5ae9fcb4bc6097a57ca7909,textures/terrain/types/snow forest.dds,,文件路径字符或扩展名不符合项目规范,valid
+R6,c7c8d9a5c7ddbd31c36047ad4c46e1254661930c,textures/ui/session/icons/mappreview/Sandbox - Carthaginians.png,,文件路径字符或扩展名不符合项目规范,valid
+R6,83680b0dee7fbfcffdbbf19ea88cc13ecc2919f2,actors/props/units/shuttle_meat_male_L.xml,,文件路径字符或扩展名不符合项目规范,valid
+R6,7943d82bfef458600f40c3c20a9a56bf90444282,textures/skins/structural/ao/ptol_temple_helle_2_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,6f4b3b6e5ccb5610fcd91ce28e7830ae50c1136d,meshes/structural/waterfall good3.png,,文件路径字符或扩展名不符合项目规范,valid
+R6,edc1b2c0660c440292490a6e6f1ed92f1491f49c,textures/skins/structural/ao/hele_wooden_tower_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,88ab3f0f5b7779fcb5ae9fcb4bc6097a57ca7909,textures/terrain/types/LavaTest04.dds,,文件路径字符或扩展名不符合项目规范,valid
+R6,d60c87cfa8696499d629de2cd20bd705fbf34147,textures/skies/sunset 2/left.dds,,文件路径字符或扩展名不符合项目规范,valid
+R6,c7c8d9a5c7ddbd31c36047ad4c46e1254661930c,textures/ui/session/icons/mappreview/Tropical Island.png,,文件路径字符或扩展名不符合项目规范,valid
+R6,34f18178694b55cffafb419a30076c257d0c69c0,animation/biped/not used/inf_2hspear_attack_e.psa,,文件路径字符或扩展名不符合项目规范,valid
+R6,c6356b41b4b826f5ebe31b53042547807b8af856,textures/skins/structural/ao/maur_range_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,d60c87cfa8696499d629de2cd20bd705fbf34147,textures/skies/sunset 2/right.dds,,文件路径字符或扩展名不符合项目规范,valid
+R6,c226517f2fe154ad4b20434e277128d97c633797,textures/skins/structural/ao/sele_wall_long_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,9929d9c6849af11023938cbca30843de48466a77,textures/skins/structural/ao/sele_civic_center_metropolitan_AO.png,,文件路径字符或扩展名不符合项目规范,invalid
+R6,b733bd113a06e56fbe6df52b86ad51d1da341965,actors/props/special/eyecandy/Plank_Big.xml,,文件路径字符或扩展名不符合项目规范,valid
+R6,d60c87cfa8696499d629de2cd20bd705fbf34147,textures/skies/sunset 2/front.dds,,文件路径字符或扩展名不符合项目规范,valid
+R6,b733bd113a06e56fbe6df52b86ad51d1da341965,meshes/props/Box_Pile.dae,,文件路径字符或扩展名不符合项目规范,valid

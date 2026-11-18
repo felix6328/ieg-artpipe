@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}入库预检{% endblock %}
+{% block body %}
+<header><h1>入库预检</h1><p>检查准备合并的美术变更，定位违反规范的文件和引用。</p></header>
+<form class="panel filters" method="get">
+  <label>目标版本 <input name="rev" value="{{ rev }}" required></label>
+  <label>基准版本 <input name="base" value="{{ base }}" placeholder="留空检查整个版本"></label>
+  <label>规则 <input name="rules" value="{{ rules }}" placeholder="R1,R2,R5,R6"></label>
+  <label class="wide">文件或目录 <input name="scope" value="{{ scope }}" placeholder="textures/skins/"></label>
+  <label>严重级别 <select name="severity">
+    {% for val, text in [('', '全部'), ('block', '拦截'), ('warn', '提醒')] %}
+    <option value="{{ val }}" {% if severity==val %}selected{% endif %}>{{ text }}</option>
+    {% endfor %}
+  </select></label>
+  <button type="submit">运行预检</button>
+</form>
+<div class="examples">
+  <span>历史案例</span>
+  <a href="/?rev=eafacb6e2%5E&amp;rules=R1">#6738 修复前</a>
+  <a href="/?rev=eafacb6e2&amp;rules=R1">#6738 修复后</a>
+  <a href="/?rev=3142b7cba%5E&amp;rules=R2">#7649 修复前</a>
+  <a href="/?rev=HEAD&amp;rules=R1,R2,R5,R6">当前版本</a>
+</div>
+{% if error %}<p class="error">{{ error }}。请确认本机已拉取 0 A.D. 的 Git 历史。</p>{% endif %}
+{% if report %}
+<div class="stats">
+  <div><span>检查文件</span><strong>{{ '{:,}'.format(report.scanned) }}</strong></div>
+  <div><span>拦截</span><strong class="{{ 'danger' if blocks else '' }}">{{ blocks }}</strong></div>
+  <div><span>提醒</span><strong>{{ warnings }}</strong></div>
+  <div><span>待人工核对</span><strong>{{ report.unavailable|length }}</strong></div>
+</div>
+<section class="panel">
+  <div class="section-heading">
+    <div><h2>问题清单</h2><p>提交 <a class="mono" href="{{ upstream }}/commit/{{ report.revision }}">{{ report.revision[:12] }}</a> · {{ '%.0f'|format(report.elapsed_ms) }} ms</p></div>
+    <div class="buttons">
+      <a href="?rev={{ rev|urlencode }}&amp;base={{ base|urlencode }}&amp;scope={{ scope|urlencode }}&amp;rules={{ rules|urlencode }}&amp;format=markdown">Markdown</a>
+      <a href="?rev={{ rev|urlencode }}&amp;base={{ base|urlencode }}&amp;scope={{ scope|urlencode }}&amp;rules={{ rules|urlencode }}&amp;format=json">JSON</a>
+    </div>
+  </div>
+  {% if findings %}
+  <div class="table-wrap"><table>
+    <thead><tr><th>级别</th><th>规则</th><th>文件</th><th>证据与修复建议</th></tr></thead>
+    <tbody>
+    {% for item in findings %}
+      <tr><td><span class="status {{ item.severity }}">{{ '拦截' if item.severity == 'block' else '提醒' }}</span></td>
+        <td>{{ item.rule }}</td><td><a class="mono" href="/asset/{{ item.path|urlencode }}">{{ item.path }}</a>{% if item.line %}<small>第 {{ item.line }} 行</small>{% endif %}</td>
+        <td>{{ item.evidence }}<small>{{ item.fix }}</small></td></tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+  {% if match_count>findings|length %}<p class="table-note">页面显示 {{ findings|length }} / {{ match_count }} 条，全部结果可从 JSON 导出。</p>{% endif %}
+  {% else %}<p class="empty">本次检查没有命中所选条件的问题。</p>{% endif %}
+</section>
+{% if report.unavailable %}
+<section class="panel"><div class="section-heading"><h2>工具失败，待人工核对</h2></div>
+<ul>{% for path, reason in report.unavailable[:20] %}<li>{{ path }} · {{ reason }}</li>{% endfor %}</ul></section>
+{% endif %}
+{% endif %}
+{% endblock %}

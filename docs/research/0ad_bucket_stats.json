@@ -1,0 +1,35 @@
+{
+ "A 机器可检(缺失/断引用/格式/重复/报错)": {
+  "n": 50,
+  "share": 0.198,
+  "defect": 46,
+  "fixed": 35,
+  "median_days": 2,
+  "over_90d": 9,
+  "over_365d": 4,
+  "open": 6,
+  "must_or_blocker": 14
+ },
+ "B 内容缺口/新资产需求": {
+  "n": 62,
+  "share": 0.246,
+  "defect": 7,
+  "fixed": 42,
+  "median_days": 181.5,
+  "over_90d": 32,
+  "over_365d": 12,
+  "open": 13,
+  "must_or_blocker": 5
+ },
+ "C 质量/表现/其他(需人判断)": {
+  "n": 140,
+  "share": 0.556,
+  "defect": 73,
+  "fixed": 78,
+  "median_days": 92.0,
+  "over_90d": 42,
+  "over_365d": 22,
+  "open": 21,
+  "must_or_blocker": 26
+ }
+}

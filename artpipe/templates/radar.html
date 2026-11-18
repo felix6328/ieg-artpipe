@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}风险雷达{% endblock %}
+{% block body %}
+<header><h1>风险雷达</h1><p>版本会前查看高优先级美术任务的评论证据。风险卡供人工复核。</p></header>
+<form class="panel filters" method="get">
+  <label class="wide">里程碑
+    <select name="milestone">{% for name in milestone_names %}<option {% if name == milestone %}selected{% endif %}>{{ name }}</option>{% endfor %}</select>
+  </label>
+  <label>指定 Issue <input type="number" min="1" name="issue" value="{{ issue or '' }}" placeholder="例如 8414"></label>
+  <button>查看风险</button>
+</form>
+{% if skipped %}<p class="table-note">{{ skipped }} 项的评论与时间线仍待导入。</p>{% endif %}
+{% for card in cards %}
+<article class="panel risk-card">
+  <div class="section-heading"><div>
+    <h2><a href="{{ upstream }}/issues/{{ card.number }}">#{{ card.number }} {{ card.title }}</a></h2>
+    <p>{{ card.priority }} · {{ card.milestone }} · {{ card.source }} · {{ card.inspected_comments }} 条评论</p>
+  </div><span class="status warn">{{ card.inactive_days }} 天未更新</span></div>
+  <ol class="events">{% for event in card.events %}
+    <li><div class="event-meta"><strong>{{ kinds[event.type] }}</strong>
+      {% if event.state == 'resolved' %}<span class="status resolved">已解除</span>{% endif %}
+      <time>{{ event.date[:10] }}</time></div>
+    <blockquote>{{ event.quote }}</blockquote>
+    <a href="{{ event.url }}">原评论</a></li>
+  {% else %}<li>此 Issue 暂无带证据的风险事件。</li>{% endfor %}</ol>
+</article>
+{% else %}<p class="empty">没有发现带证据的高优先级风险。</p>{% endfor %}
+{% endblock %}

@@ -1,0 +1,57 @@
+{
+  "comments": 60,
+  "human_reviewed": 60,
+  "model_candidates": 8,
+  "rejected_quotes": 1,
+  "quote_validation_rejection_rate": 0.125,
+  "model_calls": 0,
+  "model_cache_hits": 3,
+  "estimated_cost_cny": 0.0,
+  "estimated_cost_per_100_comments_cny": 0.0,
+  "methods": {
+    "关键词": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 5,
+      "precision": 0.9,
+      "recall": 0.6428571428571429
+    },
+    "LLM": {
+      "tp": 4,
+      "fp": 3,
+      "fn": 10,
+      "precision": 0.5714285714285714,
+      "recall": 0.2857142857142857
+    },
+    "并集": {
+      "tp": 10,
+      "fp": 4,
+      "fn": 4,
+      "precision": 0.7142857142857143,
+      "recall": 0.7142857142857143
+    }
+  },
+  "human_methods": {
+    "关键词": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 5,
+      "precision": 0.9,
+      "recall": 0.6428571428571429
+    },
+    "LLM": {
+      "tp": 4,
+      "fp": 3,
+      "fn": 10,
+      "precision": 0.5714285714285714,
+      "recall": 0.2857142857142857
+    },
+    "并集": {
+      "tp": 10,
+      "fp": 4,
+      "fn": 4,
+      "precision": 0.7142857142857143,
+      "recall": 0.7142857142857143
+    }
+  }
+}

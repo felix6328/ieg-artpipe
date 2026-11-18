@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}资产目录{% endblock %}
+{% block body %}
+<header><h1>资产目录</h1><p>按路径查找当前版本的美术资产并查看引用关系。</p></header>
+<form class="panel filters" method="get"><label class="wide">资产路径
+  <input name="q" value="{{ q }}" placeholder="例如 battering_ram 或 textures/"></label><button>查找资产</button></form>
+<section class="panel"><div class="section-heading"><h2>{{ '{:,}'.format(total) }} 个匹配资产</h2></div>
+<ul class="asset-list">{% for asset in assets %}<li><a class="mono" href="/asset/{{ asset.path|urlencode }}">{{ asset.path }}</a></li>
+{% else %}<li>没有匹配的资产。</li>{% endfor %}</ul></section>
+{% endblock %}

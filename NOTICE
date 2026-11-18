@@ -1,0 +1,15 @@
+ArtPipe is a personal portfolio project (AI product manager internship application, Tencent IEG).
+It is NOT a production system of Tencent or Wildfire Games and uses no company-internal data.
+
+Third-party content
+- 0 A.D. art assets, file names and development history: © Wildfire Games and contributors,
+  licensed under CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/).
+  This repository does NOT bundle 0 A.D. art files or repository clones. Scripts under scripts/
+  fetch them from the official sources into the git-ignored data/ directory. Any derived data
+  checked in here (issue titles/links in docs/research/, labels/) is attributed to Wildfire Games
+  and shared under CC BY-SA 3.0.
+- Issue metadata comes from the public Gitea API at https://gitea.wildfiregames.com/0ad/0ad.
+  The raw API dump (contains public account metadata) is not committed.
+- Optional Poly Haven catalogue: CC0 (https://polyhaven.com/license).
+
+The MIT license in LICENSE applies only to the original code written for this project.

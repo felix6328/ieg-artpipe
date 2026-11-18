@@ -1,0 +1,7 @@
+pycollada==0.9.3
+Pillow==13.0.0
+open-clip-torch==4.2.2
+rank-bm25==0.2.2
+jieba==0.42.1
+transformers==5.23.0
+sentencepiece==0.2.3
