@@ -29,12 +29,12 @@ This repo is a personal portfolio project by the author (AI PM internship applic
 
 ## Deliverables every repo must have
 - `README.md` that **opens with the user scenario** (one sentence: who, what moment, what pain, what the tool does, the result) and a scenario diagram, then results, then architecture.
-- `DEMO.md`: a 3–5 minute demo script with exact commands.
-- `面试讲法.md`: a 30-second pitch and likely interview follow-ups with honest answers (in Chinese).
+- `docs/DEMO.md`: a 3–5 minute demo script with exact commands.
+- `docs/面试讲法.md`: a 30-second pitch and likely interview follow-ups with honest answers (in Chinese).
 - `eval/` with reproducible results and a badcase list.
 
 ## Project-specific (game-asset-pipeline / ArtPipe)
-- Task brief: `docs/TASK.md` (= `01_game_asset_platform.md`). Evidence prototypes in `research/`.
+- Task brief: `docs/TASK.md` (= `01_game_asset_platform.md`). Evidence prototypes in `docs/research/prototypes/`.
 - Data lives in `data/` (gitignored): `data/0ad` (blobless clone), `data/blobs/`, `data/api_cache/`, `data/artpipe.sqlite`.
 - Gitea API: ≤ 2 req/s, cache every response; never full-clone 0 A.D.
 - Never commit 0 A.D. binary art; always show the CC BY-SA 3.0 attribution (README + UI footer).

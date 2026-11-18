@@ -7,4 +7,11 @@ __pycache__/
 data/
 
 # Original supplied snapshot stays local (contains public account metadata).
-research/art_issues.json
+docs/research/prototypes/art_issues.json
+
+# OS / editor
+.DS_Store
+*.pyc
+*.egg-info/
+.idea/
+.vscode/
