@@ -91,7 +91,13 @@ export type Review = {
   note: string;
   created_at: string;
 };
-export type AssetDetail = Asset & { versions: Version[]; reports: Report[]; runs: Run[]; reviews: Review[] };
+export type AssetDetail = Asset & {
+  versions: Version[];
+  reports: Report[];
+  baselines: (Report & { output_version_id: string })[];
+  runs: Run[];
+  reviews: Review[];
+};
 export type Engine = { blender_detected: boolean; max_upload_bytes: number; ruleset_version: string };
 
 export async function request<T>(path: string, method = 'GET', body?: FormData | object): Promise<T> {

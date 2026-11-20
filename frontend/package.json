@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "build": "npm run typecheck && esbuild src/main.tsx --bundle --minify --outdir=../artpipe/static/assetgate --entry-names=workbench --legal-comments=linked --target=es2022"
+    "build": "npm run typecheck && esbuild src/main.tsx --bundle --minify --outdir=../artpipe/static/assetgate --entry-names=workbench --legal-comments=linked --target=es2022",
+    "test:browser": "node tests/smoke.mjs"
   },
   "dependencies": {
     "react": "19.3.1",
@@ -16,6 +17,7 @@
     "@types/react-dom": "19.3.0",
     "@types/three": "0.179.0",
     "esbuild": "0.25.12",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "playwright": "1.65.1"
   }
 }

@@ -138,6 +138,10 @@ flowchart LR
 
 </details>
 
+## AssetGate · 本地模型工作台
+
+技术美术可以上传模型，在 Blender 几何和 UV 预检后选择处理节点，对照版本结果，人工审核并导出资产包。现有 ArtPipe 服务通过 `/workbench` 提供本地工作台入口。 [本地启动与配置](docs/phase1/README.md) · [演示指南](docs/phase1/09_demo.md) · [测试报告](docs/phase1/08_test_report.md)
+
 ## 🚀 快速开始
 
 需要 Python 3.11+、Git 2.43+。首次安装依赖与拉取 0 A.D. 数据需要网络。

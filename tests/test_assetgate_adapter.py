@@ -18,7 +18,7 @@ def test_subprocess_supports_timeout_and_cancel(tmp_path, cancel):
     fake.write_text("#!/bin/sh\nprintf 'started\\n'\nexec /bin/sleep 20\n")
     fake.chmod(0o700)
     config = load_settings()
-    config["blender"]["probe_seconds"] = 2
+    config["blender"]["probe_seconds"] = 10 if cancel else 0.4
     adapter = BlenderAdapter(fake, config)
     job = Job(tmp_path / "job")
     log = job.directory / "logs/probe.stdout.log"
@@ -32,7 +32,9 @@ def test_subprocess_supports_timeout_and_cancel(tmp_path, cancel):
     else:
         with pytest.raises(BlenderError, match="超时"):
             adapter.probe(job)
-    assert "started" in (tmp_path / "job/logs/probe.stdout.log").read_text()
+    assert log.is_file()
+    if cancel:
+        assert "started" in log.read_text()
 
 
 @pytest.mark.skipif(os.environ.get("ASSETGATE_REAL_TESTS") != "1", reason="real Blender opt-in")

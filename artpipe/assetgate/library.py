@@ -59,6 +59,9 @@ class Library:
                               WHERE v.asset_id = ? ORDER BY r.created_at DESC""",
                 "runs": """SELECT r.* FROM runs r JOIN versions v ON v.version_id = r.asset_version_id
                            WHERE v.asset_id = ? ORDER BY r.created_at DESC""",
+                "baselines": """SELECT b.*, b.run_id report_id, r.output_version_id FROM processing_baselines b
+                                 JOIN runs r ON b.run_id = r.run_id JOIN versions v ON v.version_id = b.asset_version_id
+                                 WHERE v.asset_id = ? ORDER BY b.created_at DESC""",
                 "reviews": """SELECT r.* FROM reviews r JOIN versions v ON v.version_id = r.asset_version_id
                               WHERE v.asset_id = ? ORDER BY r.created_at DESC""",
             }

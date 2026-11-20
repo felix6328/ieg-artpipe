@@ -5,7 +5,7 @@ STATUSES = ("PASS", "FAIL", "WARNING", "NOT_CHECKED")
 SEVERITIES = {"block", "warning", "info"}
 
 
-def run_qa(model, package, config, *, inspection=None, error=None):
+def run_qa(model, package, config, *, inspection=None, error=None, parse_failed=False):
     settings = config["rules"]
     results = []
     observed = inspection["metrics"] if inspection else None
@@ -33,8 +33,8 @@ def run_qa(model, package, config, *, inspection=None, error=None):
             format_error = str(exc)
     rule("FILE_FORMAT", "模型文件格式", "block", format_error is None if exists else None,
          model.suffix.upper(), "GLB / glTF / FBX / OBJ", format_error or here, "重新导出为有效的模型格式。")
-    rule("FILE_PARSE", "Blender 导入", "block", True if inspection else False if error and exists else None,
-         bool(inspection) if inspection or error else None, True,
+    parsed = True if inspection else False if parse_failed else None
+    rule("FILE_PARSE", "Blender 导入", "block", parsed, parsed, True,
          error or (inspection["version"] if inspection else "等待 Blender 检查"),
          "查看任务日志，检查模型结构与此 Blender 构建的格式支持。")
     images = observed["images"] if observed is not None else None
@@ -82,11 +82,11 @@ def run_qa(model, package, config, *, inspection=None, error=None):
     surfaces = [m for m in meshes if m["faces"]]
     missing_uv = [m["name"] for m in surfaces if not m["uv"]["layers"]]
     with_uv = [m for m in surfaces if m["uv"]["layers"]]
-    empty_uv = [m["name"] for m in with_uv if not m["uv"]["coordinates"] or not m["uv"]["nonzero"]]
+    empty_uv = {m["name"]: m["uv"]["empty_layers"] for m in with_uv if m["uv"]["empty_layers"]}
     rule("UV_LAYER", "UV 图层", settings["missing_uv_severity"], not missing_uv if surfaces else None,
          len(missing_uv) if surfaces else None, 0, missing_uv, "添加 UV，或运行 Smart UV 后人工检查。")
     rule("UV_EMPTY", "空 UV 图层", "warning", not empty_uv if with_uv else None,
-         len(empty_uv) if with_uv else None, 0, empty_uv, "确认 UV 没有全部压在原点。")
+         sum(map(len, empty_uv.values())) if with_uv else None, 0, empty_uv, "确认 UV 没有全部压在原点。")
     for key, code, label, severity, limit, advice in (
         ("invalid", "UV_VALID", "UV 坐标有效性", "block", 0, "修正非有限 UV 坐标。"),
         ("outside", "UV_RANGE", "UV 越界", settings["uv_outside_severity"], settings["max_uv_outside"],
@@ -118,8 +118,9 @@ def run_qa(model, package, config, *, inspection=None, error=None):
         rule(code, name, "block", not bad if images else None, len(bad) if images else None, 0, bad, advice)
     sizes = [image for image in images or [] if image["width"] and image["height"]]
     cap = settings["max_texture_dimension"]
-    rule("IMAGE_DIMENSIONS", "图片尺寸", "warning",
-         all(max(image["width"], image["height"]) <= cap for image in sizes) if sizes else None,
+    oversized = any(max(image["width"], image["height"]) > cap for image in sizes)
+    dimension_ok = False if oversized else True if images and len(sizes) == len(images) else None
+    rule("IMAGE_DIMENSIONS", "图片尺寸", "warning", dimension_ok,
          {image["name"]: [image["width"], image["height"]] for image in sizes} if sizes else None,
          {"max_side": cap}, {"unavailable": [im["name"] for im in images or [] if im not in sizes]},
          "核对贴图分辨率，并确认无法解码的图片。")

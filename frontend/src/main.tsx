@@ -291,7 +291,8 @@ function Detail({ asset, action, busy }: { asset: AssetDetail; action: RunAction
   const [tab, setTab] = useState<Tab>('preview');
   const version = asset.versions.find(row => row.version_id === (selected || asset.current_version_id)) ?? asset.versions[0];
   const report = asset.reports.find(row => row.asset_version_id === version.version_id);
-  const before = asset.reports.find(row => row.asset_version_id === version.parent_version_id);
+  const before = asset.baselines.find(row => row.output_version_id === version.version_id)
+    ?? asset.reports.find(row => row.asset_version_id === version.parent_version_id);
   const review = asset.reviews.find(row => row.asset_version_id === version.version_id && row.report_id === report?.report_id);
   const waiting = asset.runs.some(run => run.asset_version_id === version.version_id && isActive(run));
   const tabs: [Tab, string][] = [['preview', '概览'], ['qa', 'QA 报告'], ['process', '模型处理'],

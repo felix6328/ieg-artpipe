@@ -11,9 +11,10 @@ import stat
 import struct
 import unicodedata
 import zipfile
+import zlib
 
 MODELS = {".glb", ".gltf", ".fbx", ".obj"}
-IMAGES = {".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff", ".tga", ".bmp", ".dds", ".exr", ".hdr", ".ktx2"}
+IMAGES = {".png", ".jpg", ".jpeg", ".jp2", ".webp", ".tif", ".tiff", ".tga", ".bmp", ".dds", ".exr", ".hdr", ".ktx2"}
 DEPENDENCIES = IMAGES | {".bin", ".mtl", ".txt", ".md", ".json"}
 IMAGE_MAPS = {"bump", "disp", "decal", "norm", "refl"}
 FBX_MAGIC = b"Kaydara FBX Binary  \x00\x1a\x00"
@@ -97,7 +98,7 @@ def unpack(archive, destination, limits):
                 with bundle.open(item) as source:
                     extracted += copy_limited(source, dest, limits["unpacked_bytes"] - extracted)
     except (zipfile.BadZipFile, NotImplementedError, RuntimeError, FileExistsError, NotADirectoryError,
-            IsADirectoryError, RecursionError) as exc:
+            IsADirectoryError, RecursionError, EOFError, zlib.error) as exc:
         raise BadAsset("ZIP 无法读取或成员路径冲突") from exc
 
 

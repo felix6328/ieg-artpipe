@@ -63,6 +63,14 @@ CREATE TABLE IF NOT EXISTS reports (
     created_at TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS reports_version ON reports(asset_version_id, created_at);
+CREATE TABLE IF NOT EXISTS processing_baselines (
+    run_id TEXT PRIMARY KEY REFERENCES runs(run_id),
+    asset_version_id TEXT NOT NULL REFERENCES versions(version_id),
+    ruleset_version TEXT NOT NULL,
+    summary TEXT NOT NULL,
+    findings TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS reviews (
     review_id TEXT PRIMARY KEY,
     asset_version_id TEXT NOT NULL REFERENCES versions(version_id),

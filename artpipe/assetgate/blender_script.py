@@ -1,12 +1,14 @@
 """Trusted entry point executed only inside the Blender Python interpreter."""
 from pathlib import Path
 import json
+import re
+import shutil
 import sys
 
 import bpy
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from blender_metrics import collect
+from blender_metrics import collect, images_in_tree
 from blender_operations import process
 
 OPERATORS = {
@@ -15,6 +17,10 @@ OPERATORS = {
     "fbx": (("import_scene.fbx",), ("export_scene.fbx",)),
     "obj": (("wm.obj_import", "import_scene.obj"), ("wm.obj_export", "export_scene.obj")),
 }
+
+
+class UnsupportedFormat(RuntimeError):
+    """The required Blender operator is absent."""
 
 
 def operator_name(choices):
@@ -76,7 +82,7 @@ def import_model(source, root):
         return {}
     name = operator_name(OPERATORS[suffix][0])
     if name is None:
-        raise RuntimeError(f"当前 Blender 不支持 {suffix.upper()} 的受限导入")
+        raise UnsupportedFormat(f"当前 Blender 不支持 {suffix.upper()} 的受限导入")
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
     images = {}
@@ -97,17 +103,52 @@ def export_model(target):
     else:
         name = operator_name(OPERATORS[suffix][1])
         if name is None:
-            raise RuntimeError(f"当前 Blender 不支持 {suffix.upper()} 导出")
+            raise UnsupportedFormat(f"当前 Blender 不支持 {suffix.upper()} 导出")
         params = {"filepath": str(target), "check_existing": False}
         if suffix in {"glb", "gltf"}:
             params["export_format"] = "GLB" if suffix == "glb" else "GLTF_SEPARATE"
         elif suffix == "fbx":
             params.update(path_mode="COPY", embed_textures=True, add_leaf_bones=False)
         elif suffix == "obj":
-            params.update(path_mode="COPY")
+            params.update(path_mode="RELATIVE")
         invoke(name, **params)
     if not target.is_file():
         raise RuntimeError(f"导出未生成 {target.name}")
+
+
+def stage_obj_textures(target, source, workspace):
+    """Write packed textures and point the OBJ exporter at the packaged copies."""
+    materials = {slot.material for obj in bpy.context.scene.objects if obj.type == "MESH"
+                 for slot in obj.material_slots if slot.material and slot.material.use_nodes}
+    visited = set()
+    images = {image for material in materials for image in images_in_tree(material.node_tree, visited) if image}
+    extensions = {"JPEG": ".jpg", "TARGA": ".tga", "TARGA_RAW": ".tga", "OPEN_EXR": ".exr",
+                  "JPEG2000": ".jp2", "TIFF": ".tif"}
+    known = {".png", ".jpg", ".jpeg", ".tga", ".bmp", ".tiff", ".tif", ".exr", ".hdr", ".webp", ".dds", ".jp2"}
+    for index, image in enumerate(sorted(images, key=lambda item: item.name), 1):
+        name = Path(image.filepath or image.name).name
+        extension = Path(name).suffix.lower()
+        if extension not in known:
+            extension = extensions.get(image.file_format, f".{image.file_format.lower()}")
+        if extension not in known:
+            raise RuntimeError(f"无法以 OBJ 封装贴图 {image.name}（{image.file_format}）")
+        stem = re.sub(r"[^a-zA-Z0-9_-]+", "_", Path(name).stem) or "texture"
+        path = target.parent / "textures" / f"{index:03d}-{stem}{extension.lower()}"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if image.packed_file:
+            path.write_bytes(image.packed_file.data)
+            image.unpack(method="REMOVE")
+        else:
+            candidates = [Path(bpy.path.abspath(image.filepath)).resolve(),
+                          (source.parent / image.filepath.removeprefix("//")).resolve()]
+            local = next((path for path in candidates if path.is_relative_to(workspace) and path.is_file()), None)
+            if local:
+                shutil.copyfile(local, path)
+            elif image.has_data:
+                image.save(filepath=str(path))
+            else:
+                continue
+        image.filepath = str(path)
 
 
 def main(request):
@@ -125,7 +166,12 @@ def main(request):
     # only sees the model bundle, not the job's other stages or logs.
     bundle = source.relative_to(workspace).parts[0]
     root = workspace / bundle
-    imported_images = import_model(source, root)
+    try:
+        imported_images = import_model(source, root)
+    except Exception as exc:
+        failure = {"ok": False, "error": str(exc), "parse_failed": not isinstance(exc, UnsupportedFormat)}
+        Path(request["result"]).write_text(json.dumps(failure, ensure_ascii=False), encoding="utf-8")
+        raise
     if action == "inspect":
         result["metrics"] = collect(source, root, imported_images, request.get("area_epsilon", 1e-12))
         if request.get("preview") and result["metrics"]["triangles"]:
@@ -137,7 +183,10 @@ def main(request):
     if action == "process":
         process(request["operation"], request["settings"])
     if action in {"process", "export"}:
-        export_model(Path(request["target"]))
+        target = Path(request["target"])
+        if target.suffix.lower() == ".obj":
+            stage_obj_textures(target, source, workspace)
+        export_model(target)
     return result
 
 

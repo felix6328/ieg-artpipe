@@ -18,6 +18,10 @@ SCRIPT = Path(__file__).with_name("blender_script.py")
 class BlenderError(RuntimeError):
     """Blender could not complete the requested operation."""
 
+    def __init__(self, message, *, parse_failed=False):
+        super().__init__(message)
+        self.parse_failed = parse_failed
+
 
 class JobCanceled(RuntimeError):
     """The worker was asked to cancel the active job."""
@@ -141,21 +145,26 @@ class BlenderAdapter:
                             continue
                 finally:
                     if process.poll() is None:
-                        os.killpg(process.pid, signal.SIGKILL)
+                        try:
+                            os.killpg(process.pid, signal.SIGKILL)
+                        except ProcessLookupError:
+                            pass
                         process.wait()
         except OSError as exc:
             raise BlenderError(f"无法启动或控制 Blender：{exc}") from exc
         if canceled():
             raise JobCanceled()
-        if code:
-            info = tail(log_dir / f"{stage}.stderr.log") or tail(log_dir / f"{stage}.stdout.log")
-            raise BlenderError(f"Blender {stage} 退出码 {code}\n{info}")
         try:
             value = json.loads(result.read_text(encoding="utf-8"))
-        except (OSError, ValueError) as exc:
-            raise BlenderError(f"Blender {stage} 缺少有效输出") from exc
+        except (OSError, ValueError):
+            value = {}
+        if code:
+            info = tail(log_dir / f"{stage}.stderr.log") or tail(log_dir / f"{stage}.stdout.log")
+            raise BlenderError(f"Blender {stage} 退出码 {code}\n{value.get('error') or info}",
+                               parse_failed=value.get("parse_failed", False))
         if not value.get("ok"):
-            raise BlenderError(value.get("error", f"Blender {stage} 未完成"))
+            raise BlenderError(value.get("error", f"Blender {stage} 缺少有效输出"),
+                               parse_failed=value.get("parse_failed", False))
         return value
 
 

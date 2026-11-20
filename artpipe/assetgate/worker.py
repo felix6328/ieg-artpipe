@@ -11,7 +11,7 @@ import shutil
 from .blender import BlenderError, Job, JobCanceled
 from .database import clock, encode, identifier, record
 from .qa import run_qa
-from .storage import BadAsset, digest, validate_model
+from .storage import MODELS, BadAsset, digest, validate_model
 from .workflow import Conflict, change_head, get_run, get_version, nodes_for, verify_export
 
 logger = logging.getLogger(__name__)
@@ -90,7 +90,8 @@ class Task:
                 with self.db.connect(write=True) as db:
                     if get_run(db, self.run_id)["cancel_requested"]:
                         raise JobCanceled() from exc
-                    report = run_qa(source, package, self.library.config, error=str(exc))
+                    report = run_qa(source, package, self.library.config, error=str(exc),
+                                    parse_failed=getattr(exc, "parse_failed", False))
                     self.save_report(db, failed_report_for, report)
             raise
         return run_qa(source, package, self.library.config, inspection=result), bool(result.get("preview_ready"))
@@ -155,9 +156,9 @@ class Task:
         output = self.job.output / target
         with self.node("recheck"):
             report, ready = self.inspect(output, output.parent, "recheck", "preview.glb")
-        self.publish(output, report, ready)
+        self.publish(output, report, ready, source_report)
 
-    def publish(self, output, report, ready):
+    def publish(self, output, report, ready, baseline):
         version_id = self.run_id
         asset_id = self.version["asset_id"]
         folder = self.library.path(f"assets/{asset_id}/{version_id}")
@@ -184,6 +185,11 @@ class Task:
                            (version_id, asset_id, number, parent["version_id"], self.relative(model), digest(model),
                             model.suffix[1:].upper(), clock(), encode(files), preview, freshness))
                 self.save_report(db, version_id, report)
+                baseline["summary"]["adapter_mode"] = self.adapter.mode
+                db.execute("""INSERT INTO processing_baselines(run_id, asset_version_id, ruleset_version,
+                              summary, findings, created_at) VALUES(?,?,?,?,?,?)""",
+                           (self.run_id, parent["version_id"], baseline["ruleset_version"], encode(baseline["summary"]),
+                            encode(baseline["findings"]), self.run["started_at"]))
                 if not stale:
                     change_head(db, asset_id, version_id)
                 self.complete(db, outputs=files + ([preview] if preview else []), output_version=version_id,
@@ -215,6 +221,8 @@ class Task:
                 for name in version["files"]:
                     self.check_cancel()
                     path = self.library.path(name)
+                    if name != version["source_file"] and path.suffix.lower() in MODELS:
+                        continue
                     entry = f"model/{path.relative_to(directory).as_posix()}"
                     checksum = digest(path)
                     if name == version["source_file"] and checksum != version["file_hash"]:

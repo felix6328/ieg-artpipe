@@ -19,8 +19,9 @@ def topology(mesh):
 
 
 def inspect_uv(mesh):
-    count = invalid = outside = nonzero = 0
+    layers = []
     for layer in mesh.uv_layers:
+        count = invalid = outside = nonzero = 0
         for datum in layer.uv if hasattr(layer, "uv") else layer.data:
             u, v = datum.vector if hasattr(datum, "vector") else datum.uv
             count += 1
@@ -29,8 +30,10 @@ def inspect_uv(mesh):
                 continue
             nonzero += int(u != 0 or v != 0)
             outside += int(not (0 <= u <= 1 and 0 <= v <= 1))
-    return {"layers": len(mesh.uv_layers), "coordinates": count, "invalid": invalid,
-            "outside": outside, "nonzero": nonzero}
+        layers.append({"name": layer.name, "coordinates": count, "invalid": invalid,
+                       "outside": outside, "nonzero": nonzero})
+    return {"layers": len(layers), "empty_layers": [layer["name"] for layer in layers if not layer["nonzero"]],
+            **{key: sum(layer[key] for layer in layers) for key in ("coordinates", "invalid", "outside")}}
 
 
 def images_in_tree(tree, visited):
