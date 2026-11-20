@@ -5,6 +5,9 @@ import sys
 
 import bpy
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from blender_metrics import collect
+
 OPERATORS = {
     "glb": (("import_scene.gltf",), ("export_scene.gltf",)),
     "gltf": (("import_scene.gltf",), ("export_scene.gltf",)),
@@ -43,7 +46,7 @@ def scoped_fbx_import(name, source, root, images):
         if ":" in raw or not candidate.is_relative_to(root):
             image = bpy.data.images.new(Path(raw).name or "Missing texture", 1, 1)
             image.source = "FILE"
-            images[image.name] = {"path": Path(raw).name, "valid": False, "exists": False}
+            images[image.as_pointer()] = {"path": Path(raw).name, "valid": False, "exists": False}
             return image
         relative = candidate.relative_to(root).as_posix()
         if candidate.is_file():
@@ -55,7 +58,7 @@ def scoped_fbx_import(name, source, root, images):
         else:
             image = bpy.data.images.new(candidate.name, 1, 1)
             image.source = "FILE"
-        images[image.name] = {"path": relative, "valid": True, "exists": candidate.is_file()}
+        images[image.as_pointer()] = {"path": relative, "valid": True, "exists": candidate.is_file()}
         return image
 
     image_utils.load_image = load
@@ -121,6 +124,14 @@ def main(request):
     bundle = source.relative_to(workspace).parts[0]
     root = workspace / bundle
     imported_images = import_model(source, root)
+    if action == "inspect":
+        result["metrics"] = collect(source, root, imported_images, request.get("area_epsilon", 1e-12))
+        if request.get("preview") and result["metrics"]["triangles"]:
+            try:
+                export_model(Path(request["preview"]))
+                result["preview_ready"] = True
+            except RuntimeError as exc:
+                result["preview_error"] = str(exc)
     if action == "export":
         export_model(Path(request["target"]))
     return result
