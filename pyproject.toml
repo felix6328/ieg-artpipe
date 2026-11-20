@@ -6,13 +6,13 @@ build-backend = "setuptools.build_meta"
 name = "artpipe"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = ["PyYAML==6.0.3", "fastapi==0.163.1", "jinja2==3.1.6", "uvicorn==0.54.0"]
+dependencies = ["PyYAML==6.0.3", "fastapi==0.163.1", "jinja2==3.1.6", "uvicorn==0.54.0", "python-multipart==0.0.32"]
 
 [project.scripts]
 artpipe = "artpipe.__main__:main"
 
 [tool.setuptools]
-packages = ["artpipe"]
+packages = ["artpipe", "artpipe.assetgate"]
 
 [tool.setuptools.package-data]
 artpipe = ["templates/*.html", "static/*.css"]

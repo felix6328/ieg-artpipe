@@ -1,0 +1,24 @@
+storage: data/assetgate
+upload:
+  max_bytes: 104857600
+  unpacked_bytes: 314572800
+  max_members: 1024
+blender:
+  timeout_seconds: 180
+  probe_seconds: 20
+worker:
+  poll_seconds: 0.25
+ruleset_version: "phase1.1"
+rules:
+  max_file_bytes: 104857600
+  max_triangles: 100000
+  max_non_manifold_edges: 0
+  non_manifold_severity: warning
+  max_degenerate_faces: 0
+  max_isolated_geometry: 0
+  degenerate_area_epsilon: 1.0e-12
+  max_uv_outside: 0
+  uv_outside_severity: info
+  missing_uv_severity: warning
+  missing_material_severity: info
+  max_texture_dimension: 4096

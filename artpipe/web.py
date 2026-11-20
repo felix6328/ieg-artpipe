@@ -15,6 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import yaml
 
+from .assetgate.api import router as assetgate_router
 from .catalog import connect
 from .git_source import ART, GitSource
 from .metrics import milestones as milestone_metrics
@@ -28,6 +29,7 @@ DB = ROOT / "data/artpipe.sqlite"
 SOURCE = GitSource(ROOT / "data/0ad")
 SPEC = yaml.safe_load((ROOT / "configs/precheck.yaml").read_text(encoding="utf-8"))
 app = FastAPI(title="ArtPipe 工作台", docs_url=None, redoc_url=None)
+app.include_router(assetgate_router)
 app.mount("/static", StaticFiles(directory=WEB / "static"), name="static")
 views = Jinja2Templates(directory=WEB / "templates")
 
