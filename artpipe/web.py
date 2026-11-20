@@ -1,7 +1,7 @@
 """Read-only FastAPI workbench for asset review and release preparation."""
 from __future__ import annotations
 
-from contextlib import closing
+from contextlib import asynccontextmanager, closing
 from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
@@ -15,7 +15,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import yaml
 
-from .assetgate.api import router as assetgate_router
+from .assetgate.api import router as assetgate_router, workspace
+from .assetgate.blender import BlenderAdapter, detect_blender
+from .assetgate.local_http import LocalAssetAPI
+from .assetgate.worker import Worker
 from .catalog import connect
 from .git_source import ART, GitSource
 from .metrics import milestones as milestone_metrics
@@ -28,7 +31,18 @@ WEB = Path(__file__).resolve().parent
 DB = ROOT / "data/artpipe.sqlite"
 SOURCE = GitSource(ROOT / "data/0ad")
 SPEC = yaml.safe_load((ROOT / "configs/precheck.yaml").read_text(encoding="utf-8"))
-app = FastAPI(title="ArtPipe 工作台", docs_url=None, redoc_url=None)
+
+
+@asynccontextmanager
+async def lifespan(_app):
+    library = workspace()
+    worker = Worker(library, BlenderAdapter(detect_blender(), library.config))
+    with worker.background():
+        yield
+
+
+app = FastAPI(title="ArtPipe 工作台", docs_url=None, redoc_url=None, lifespan=lifespan)
+app.add_middleware(LocalAssetAPI)
 app.include_router(assetgate_router)
 app.mount("/static", StaticFiles(directory=WEB / "static"), name="static")
 views = Jinja2Templates(directory=WEB / "templates")

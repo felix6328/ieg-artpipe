@@ -132,7 +132,7 @@ def dependency(model, root, raw, *, uri=False):
         raw = unquote(url.path)
     else:
         raw = raw.replace("\\", "/")
-    if raw.startswith("/") or re.search(r"[:\x00-\x1f]", raw):
+    if raw.startswith("/") or re.search(r"[:\\\x00-\x1f]", raw):
         raise BadAsset("模型引用必须使用资产包内相对路径")
     result = (model.parent / raw).resolve()
     if not result.is_relative_to(root.resolve()):
@@ -141,6 +141,10 @@ def dependency(model, root, raw, *, uri=False):
 
 
 def obj_references(model, root):
+    mtl_paths = set()
+    default = model.with_suffix(".mtl")
+    if default.is_file():
+        mtl_paths.add(default)
     with model.open(encoding="utf-8-sig", errors="replace") as stream:
         for line in stream:
             tokens = line.strip().split(maxsplit=1)
@@ -154,16 +158,20 @@ def obj_references(model, root):
                 except ValueError as exc:
                     raise BadAsset("MTL 文件引用无效") from exc
             for entry in dict.fromkeys(candidates if len(candidates) <= 1 else candidates[1:]):
-                mtl = dependency(model, root, entry)
-                yield mtl
-                if not mtl.is_file():
-                    continue
-                with mtl.open(encoding="utf-8-sig", errors="replace") as materials:
-                    for statement in materials:
-                        statement = statement.strip().split(maxsplit=1)
-                        if len(statement) == 2 and (statement[0].lower().startswith("map_")
-                                                    or statement[0].lower() in IMAGE_MAPS):
-                            yield dependency(mtl, root, map_path(statement[1]))
+                mtl_paths.add(dependency(model, root, entry))
+    for mtl in sorted(mtl_paths):
+        yield mtl
+        if mtl.is_file():
+            with mtl.open(encoding="utf-8-sig", errors="replace") as materials:
+                for statement in materials:
+                    statement = statement.strip().split(maxsplit=1)
+                    if len(statement) == 2 and (statement[0].lower().startswith("map_")
+                                                or statement[0].lower() in IMAGE_MAPS):
+                        raw = map_path(statement[1])
+                        yield dependency(mtl, root, raw)
+                        if mtl.parent != model.parent:
+                            # Blender's legacy import looks up maps from the OBJ directory.
+                            dependency(model, root, raw)
 
 
 def map_path(statement):

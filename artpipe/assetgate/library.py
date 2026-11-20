@@ -58,7 +58,7 @@ class Library:
                 asset[key] = [record(row) for row in db.execute(query, (asset_id,))]
             return asset
 
-    def upload(self, stream, filename, name, asset_type, model_entry=None):
+    def upload(self, stream, filename, name, asset_type, model_entry=None, *, after_create=None):
         filename = filename or "upload"
         if len(parts(filename).parts) != 1:
             raise BadAsset("上传文件名不能包含目录")
@@ -107,6 +107,8 @@ class Library:
                                (version_id, asset_id, f"{version_folder}/{relative}", digest(final / relative),
                                 model.suffix[1:].upper(), stamp, encode(files), digest(final / original.relative_to(stage))))
                     db.execute("UPDATE assets SET current_version_id = ? WHERE asset_id = ?", (version_id, asset_id))
+                    if after_create:
+                        after_create(db, version_id)
             except Exception:
                 shutil.rmtree(final.parent)
                 raise

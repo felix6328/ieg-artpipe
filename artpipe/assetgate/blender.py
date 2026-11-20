@@ -61,6 +61,7 @@ class BlenderAdapter:
     def __init__(self, binary, config):
         self.binary = Path(binary) if binary else None
         self.config = config["blender"]
+        self.worker_lock_fd = None
 
     def get_blender_version(self):
         if self.binary is None:
@@ -82,9 +83,9 @@ class BlenderAdapter:
         return self._execute(job, stage, canceled, action="inspect", source=self._input(job, source),
                              preview=path, area_epsilon=area_epsilon)
 
-    def process_model(self, job, source, target, operation, canceled):
+    def process_model(self, job, source, target, operation, settings, canceled):
         return self._execute(job, operation, canceled, action="process", source=self._input(job, source),
-                             target=self._output(job, target), operation=operation)
+                             target=self._output(job, target), operation=operation, settings=settings)
 
     def export_model(self, job, source, target, canceled, *, stage="convert"):
         return self._execute(job, stage, canceled, action="export", source=self._input(job, source),
@@ -124,7 +125,8 @@ class BlenderAdapter:
             with ((log_dir / f"{stage}.stdout.log").open("wb") as stdout,
                   (log_dir / f"{stage}.stderr.log").open("wb") as stderr):
                 process = subprocess.Popen(argv, cwd=job.directory, env=env, stdout=stdout,
-                                           stderr=stderr, start_new_session=True)
+                                           stderr=stderr, start_new_session=True,
+                                           pass_fds=() if self.worker_lock_fd is None else (self.worker_lock_fd,))
                 try:
                     while True:
                         if canceled():

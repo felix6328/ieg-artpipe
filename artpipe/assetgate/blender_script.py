@@ -7,6 +7,7 @@ import bpy
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from blender_metrics import collect
+from blender_operations import process
 
 OPERATORS = {
     "glb": (("import_scene.gltf",), ("export_scene.gltf",)),
@@ -91,7 +92,8 @@ def export_model(target):
     target.parent.mkdir(parents=True, exist_ok=True)
     suffix = target.suffix.lower()[1:]
     if suffix == "blend":
-        invoke("wm.save_as_mainfile", filepath=str(target), compress=True)
+        invoke("file.pack_all")
+        invoke("wm.save_as_mainfile", filepath=str(target), compress=True, relative_remap=False)
     else:
         name = operator_name(OPERATORS[suffix][1])
         if name is None:
@@ -132,7 +134,9 @@ def main(request):
                 result["preview_ready"] = True
             except RuntimeError as exc:
                 result["preview_error"] = str(exc)
-    if action == "export":
+    if action == "process":
+        process(request["operation"], request["settings"])
+    if action in {"process", "export"}:
         export_model(Path(request["target"]))
     return result
 
