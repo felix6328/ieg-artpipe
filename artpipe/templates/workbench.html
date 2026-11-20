@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}本地模型工作台{% endblock %}
+{% block body_class %}assetgate{% endblock %}
+{% block head %}
+  {% if built %}
+  <link rel="stylesheet" href="{{ url_for('static', path='assetgate/workbench.css').path }}">
+  <script type="module" src="{{ url_for('static', path='assetgate/workbench.js').path }}"></script>
+  {% endif %}
+{% endblock %}
+{% block body %}
+  {% if built %}
+  <div id="assetgate-root"><noscript>请启用 JavaScript 以打开本地模型工作台。</noscript></div>
+  {% else %}
+  <section class="ag-build-help">
+    <h1>本地模型工作台</h1>
+    <p>请在仓库根目录运行 <code>npm --prefix frontend ci</code> 和 <code>npm --prefix frontend run build</code>，然后刷新此页。</p>
+  </section>
+  {% endif %}
+{% endblock %}

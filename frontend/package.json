@@ -1,0 +1,21 @@
+{
+  "name": "assetgate-workbench",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && esbuild src/main.tsx --bundle --minify --outdir=../artpipe/static/assetgate --entry-names=workbench --legal-comments=linked --target=es2022"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.179.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.179.0",
+    "esbuild": "0.25.12",
+    "typescript": "5.9.3"
+  }
+}

@@ -15,4 +15,4 @@ artpipe = "artpipe.__main__:main"
 packages = ["artpipe", "artpipe.assetgate"]
 
 [tool.setuptools.package-data]
-artpipe = ["templates/*.html", "static/*.css"]
+artpipe = ["templates/*.html", "static/*.css", "static/assetgate/*"]

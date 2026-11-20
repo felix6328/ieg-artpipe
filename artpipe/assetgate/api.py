@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse, PlainTextResponse
 from pydantic import BaseModel, Field
 
 from .blender import detect_blender, tail
+from .database import record
 from .workflow import Conflict, Workflow
 from .library import Library, MissingRecord
 from .settings import load_settings, storage_root
@@ -118,6 +119,16 @@ def preview(version_id: str):
     except MissingRecord as exc:
         raise HTTPException(404, str(exc)) from exc
     return FileResponse(path, media_type="model/gltf-binary", headers={"Cache-Control": "no-store"})
+
+
+@router.get("/runs")
+def runs():
+    with workspace().db.connect() as db:
+        return [record(row) for row in db.execute(
+            """SELECT r.*, a.asset_id, a.name asset_name FROM runs r
+               JOIN versions v ON r.asset_version_id = v.version_id
+               JOIN assets a ON v.asset_id = a.asset_id
+               ORDER BY r.status IN ('RUNNING','PENDING') DESC, r.created_at DESC LIMIT 200""")]
 
 
 @router.get("/runs/{run_id}")

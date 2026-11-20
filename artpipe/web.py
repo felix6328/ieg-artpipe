@@ -53,6 +53,12 @@ def page(request, template, active, **context):
                                   context={"active": active, "upstream": UPSTREAM, **context})
 
 
+@app.get("/workbench", response_class=HTMLResponse)
+def assetgate_workbench(request: Request):
+    built = (WEB / "static/assetgate/workbench.js").is_file()
+    return page(request, "workbench.html", "assetgate", built=built)
+
+
 @app.get("/", response_class=HTMLResponse)
 def intake(request: Request, rev: str = "eafacb6e2^", base: str = "", scope: str = "", rules: str = "R1",
            format: str = "", severity: str = ""):

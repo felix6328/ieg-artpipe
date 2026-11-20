@@ -27,7 +27,15 @@ class Library:
     def asset_list(self):
         with self.db.connect() as db:
             rows = db.execute("""SELECT a.*, v.version_number, v.file_format, v.preview_file,
-                                        (SELECT count(*) FROM versions WHERE asset_id = a.asset_id) versions
+                                        (SELECT count(*) FROM versions WHERE asset_id = a.asset_id) versions,
+                                        (SELECT count(*) FROM runs r JOIN versions rv ON r.asset_version_id = rv.version_id
+                                          WHERE rv.asset_id = a.asset_id AND r.status IN ('PENDING','RUNNING')) active_runs,
+                                        EXISTS(SELECT 1 FROM reviews w WHERE w.review_id = (
+                                          SELECT review_id FROM reviews WHERE asset_version_id = v.version_id
+                                          ORDER BY created_at DESC, rowid DESC LIMIT 1
+                                        ) AND w.report_id = (SELECT report_id FROM reports
+                                          WHERE asset_version_id = v.version_id
+                                          ORDER BY created_at DESC, rowid DESC LIMIT 1) AND w.decision = 'APPROVED') approved
                                  FROM assets a JOIN versions v ON v.version_id = a.current_version_id
                                  ORDER BY a.created_at DESC""")
             return [record(row) for row in rows]

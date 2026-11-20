@@ -15,3 +15,6 @@ docs/research/prototypes/art_issues.json
 *.egg-info/
 .idea/
 .vscode/
+
+frontend/node_modules/
+artpipe/static/assetgate/
